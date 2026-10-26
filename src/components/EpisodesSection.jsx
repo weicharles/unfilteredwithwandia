@@ -1,80 +1,94 @@
 import React, { useState } from 'react';
 import { PODCAST_DATA } from '../data/podcastData';
-import { IconPlay, IconYoutube, IconEye, IconClock } from './Icons';
+import { IconPlay, IconYoutube } from './Icons';
 
 export default function EpisodesSection() {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [featuredId, setFeaturedId] = useState(PODCAST_DATA.episodes[0].youtubeId);
   const [playingVideoId, setPlayingVideoId] = useState(null);
+  const [showAllEpisodes, setShowAllEpisodes] = useState(false);
 
   const categories = [
     'All',
-    'Confidence & Healing',
-    'Faith & Family',
-    'Campus Life',
     'Money & Hustle',
-    'Mental Health',
-    'Love & Relationships'
+    'Campus Life',
+    'Faith & Family',
+    'Confidence & Healing',
+    'Love & Relationships',
+    'Mental Health'
   ];
 
-  const featuredEpisode = PODCAST_DATA.episodes.find((ep) => ep.featured) || PODCAST_DATA.episodes[0];
+  const currentFeatured = PODCAST_DATA.episodes.find((ep) => ep.youtubeId === featuredId) || PODCAST_DATA.episodes[0];
 
   const filteredEpisodes = PODCAST_DATA.episodes.filter((ep) => {
     if (activeFilter === 'All') return true;
     return ep.topic === activeFilter;
   });
 
+  const visibleEpisodes = showAllEpisodes ? filteredEpisodes : filteredEpisodes.slice(0, 6);
+
+  const handlePlayEpisode = (ep) => {
+    setFeaturedId(ep.youtubeId);
+    setPlayingVideoId(ep.youtubeId);
+    const playerEl = document.getElementById('featured-player');
+    if (playerEl) {
+      const navOffset = 90;
+      const elementPosition = playerEl.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navOffset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <section id="episodes" className="section" style={{ backgroundColor: 'var(--color-cream)' }}>
+    <section id="episodes" className="section" style={{ backgroundColor: 'var(--color-page)' }}>
       <div className="container">
         
-        {/* Section Header */}
-        <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 40px' }}>
-          <span style={{ fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--color-grey-muted)' }}>
-            EPISODES & INTERVIEWS
-          </span>
-          <h2 style={{ fontSize: 'clamp(1.9rem, 3.6vw, 2.5rem)', marginTop: '8px', marginBottom: '14px' }}>
-            Watch the Conversations
+        {/* Section Header without Eyebrow */}
+        <div style={{ textAlign: 'left', maxWidth: '680px', marginBottom: '40px' }}>
+          <h2 style={{ fontSize: 'var(--type-heading)', marginBottom: '10px' }}>
+            Watch the conversations.
           </h2>
-          <p style={{ fontSize: '1.05rem', color: '#44444A' }}>
-            Unedited, raw, and transformative stories that give our audience a reason to listen and reflect.
+          <p style={{ fontSize: 'var(--type-body)', color: 'var(--color-grey-muted)' }}>
+            Unedited, raw, and transformative stories arranged from newest release to classic episodes.
           </p>
         </div>
 
-        {/* Featured Video Player (Click-to-Load YouTube Facade) */}
+        {/* Featured Video Player (Instant YouTube Embed or High-Res Facade) */}
         <div
-          className="card"
+          id="featured-player"
+          className="surface-white"
           style={{
             padding: '24px',
-            marginBottom: '48px',
-            border: '2px solid var(--color-black)',
-            boxShadow: 'var(--shadow-offset)'
+            marginBottom: '48px'
           }}
         >
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '24px', alignItems: 'center' }} className="featured-video-grid">
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '28px', alignItems: 'center' }} className="featured-video-grid">
             
-            {/* Video Viewport / Facade */}
+            {/* Video Viewport */}
             <div
               style={{
                 position: 'relative',
                 width: '100%',
                 aspectRatio: '16 / 9',
-                backgroundColor: '#0C0C0D',
+                backgroundColor: 'var(--color-black)',
                 borderRadius: 'var(--radius-md)',
-                overflow: 'hidden',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.2)'
+                overflow: 'hidden'
               }}
             >
-              {playingVideoId === featuredEpisode.id ? (
+              {playingVideoId === currentFeatured.youtubeId ? (
                 <iframe
-                  src={`https://www.youtube-nocookie.com/embed?listType=search&list=Unfiltered+With+Wandia+${encodeURIComponent(featuredEpisode.title)}&autoplay=1`}
-                  title={featuredEpisode.title}
+                  src={`https://www.youtube-nocookie.com/embed/${currentFeatured.youtubeId}?autoplay=1&rel=0`}
+                  title={currentFeatured.title}
                   style={{ width: '100%', height: '100%', border: 'none' }}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               ) : (
                 <div
-                  onClick={() => setPlayingVideoId(featuredEpisode.id)}
+                  onClick={() => setPlayingVideoId(currentFeatured.youtubeId)}
                   style={{
                     position: 'absolute',
                     inset: 0,
@@ -82,51 +96,44 @@ export default function EpisodesSection() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    backgroundImage: `linear-gradient(rgba(12,12,13,0.35), rgba(12,12,13,0.75)), url('${PODCAST_DATA.brand.portraitUrl}')`,
+                    backgroundImage: `linear-gradient(rgba(12,12,13,0.35), rgba(12,12,13,0.7)), url('https://i.ytimg.com/vi/${currentFeatured.youtubeId}/hqdefault.jpg')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
                   title="Click to play episode"
                 >
-                  {/* Big Play Button Badge */}
+                  {/* Big Flat Play Button */}
                   <div
                     style={{
-                      width: '74px',
-                      height: '74px',
+                      width: '72px',
+                      height: '72px',
                       borderRadius: '50%',
                       backgroundColor: 'var(--color-pink)',
-                      color: 'var(--color-black)',
+                      color: '#0C0C0D',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      boxShadow: '0 8px 30px rgba(242, 159, 196, 0.65)',
-                      transition: 'transform 0.25s ease',
                       paddingLeft: '4px'
                     }}
-                    className="play-btn-pulse"
                   >
-                    <IconPlay size={32} />
+                    <IconPlay size={30} />
                   </div>
 
-                  {/* Overlaid duration & status badge */}
+                  {/* Overlaid duration badge */}
                   <div
                     style={{
                       position: 'absolute',
                       bottom: '16px',
                       left: '16px',
-                      backgroundColor: 'rgba(0,0,0,0.85)',
+                      backgroundColor: 'rgba(12,12,13,0.85)',
                       color: '#FFFFFF',
-                      padding: '6px 12px',
+                      padding: '6px 14px',
                       borderRadius: 'var(--radius-sm)',
-                      fontSize: '0.8rem',
-                      fontWeight: 600,
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px'
+                      fontSize: '14px',
+                      fontWeight: 600
                     }}
                   >
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#25D366' }} />
-                    FEATURED EPISODE · {featuredEpisode.duration}
+                    {currentFeatured.youtubeId === PODCAST_DATA.episodes[0].youtubeId ? 'Latest Release' : 'Selected Episode'} · {currentFeatured.duration}
                   </div>
                 </div>
               )}
@@ -134,39 +141,53 @@ export default function EpisodesSection() {
 
             {/* Video Details Column */}
             <div>
-              <div style={{ display: 'flex', gap: '8px', marginBottom: '12px' }}>
-                <span className="pill pill-pink" style={{ fontSize: '0.82rem', padding: '4px 12px' }}>
-                  {featuredEpisode.topic}
+              <h3 style={{ fontSize: 'clamp(1.25rem, 2vw, 1.55rem)', marginBottom: '10px', lineHeight: 1.25, display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                {currentFeatured.title}
+              </h3>
+
+              <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginBottom: '16px', flexWrap: 'wrap' }}>
+                <span
+                  style={{
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    backgroundColor: '#FFFFFF',
+                    border: '1px solid var(--color-border)',
+                    padding: '4px 12px',
+                    borderRadius: 'var(--radius-pill)',
+                    color: 'var(--color-black)'
+                  }}
+                >
+                  {currentFeatured.topic}
                 </span>
-                <span style={{ fontSize: '0.85rem', color: 'var(--color-grey-muted)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <IconEye size={15} /> {featuredEpisode.views} views
+                <span style={{ fontSize: '14px', color: 'var(--color-grey-muted)' }}>
+                  {currentFeatured.views} views
+                </span>
+                <span style={{ color: 'var(--color-grey-muted)' }}>·</span>
+                <span style={{ fontSize: '14px', color: 'var(--color-grey-muted)' }}>
+                  Guest: {currentFeatured.guest}
                 </span>
               </div>
 
-              <h3 style={{ fontSize: 'clamp(1.3rem, 2.4vw, 1.7rem)', marginBottom: '12px', lineHeight: 1.3 }}>
-                {featuredEpisode.title}
-              </h3>
-
-              <p style={{ fontSize: '1rem', color: '#44444A', lineHeight: 1.6, marginBottom: '22px' }}>
-                {featuredEpisode.summary}
+              <p style={{ fontSize: 'var(--type-body)', color: '#4E4E56', marginBottom: '24px', lineHeight: 1.6 }}>
+                {currentFeatured.summary}
               </p>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
                 <button
-                  onClick={() => setPlayingVideoId(featuredEpisode.id)}
+                  onClick={() => setPlayingVideoId(currentFeatured.youtubeId)}
                   className="btn-primary"
-                  style={{ fontSize: '0.92rem', padding: '12px 24px' }}
+                  style={{ fontSize: '15px', padding: '12px 24px' }}
                 >
-                  <IconPlay size={18} /> Play Episode Now
+                  <IconPlay size={16} /> Play Episode Now
                 </button>
                 <a
-                  href={PODCAST_DATA.brand.youtubeUrl}
+                  href={`https://www.youtube.com/watch?v=${currentFeatured.youtubeId}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-outline"
-                  style={{ fontSize: '0.92rem', padding: '12px 22px' }}
+                  className="btn-secondary"
+                  style={{ fontSize: '15px', padding: '12px 24px' }}
                 >
-                  <IconYoutube size={18} /> Open on YouTube
+                  <IconYoutube size={16} /> Open on YouTube
                 </a>
               </div>
             </div>
@@ -175,18 +196,24 @@ export default function EpisodesSection() {
         </div>
 
         {/* Filter Pills */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '32px', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '32px' }}>
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setActiveFilter(cat)}
-              className="pill"
+              onClick={() => {
+                setActiveFilter(cat);
+                setShowAllEpisodes(false);
+              }}
               style={{
-                backgroundColor: activeFilter === cat ? 'var(--color-black)' : 'var(--color-white)',
+                backgroundColor: activeFilter === cat ? 'var(--color-black)' : 'var(--color-surface)',
                 color: activeFilter === cat ? '#FFFFFF' : 'var(--color-black)',
-                borderColor: activeFilter === cat ? 'var(--color-black)' : 'var(--color-border)',
+                padding: '8px 18px',
+                borderRadius: 'var(--radius-pill)',
+                fontSize: '14px',
                 fontWeight: activeFilter === cat ? 600 : 500,
-                cursor: 'pointer'
+                cursor: 'pointer',
+                border: 'none',
+                transition: 'background-color 0.2s ease, color 0.2s ease'
               }}
             >
               {cat}
@@ -194,43 +221,144 @@ export default function EpisodesSection() {
           ))}
         </div>
 
-        {/* Grid of Episodes */}
+        {/* Grid of Real Episodes */}
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
             gap: '24px',
-            marginBottom: '48px'
+            marginBottom: '40px'
           }}
         >
-          {filteredEpisodes.map((ep) => (
+          {visibleEpisodes.map((ep, idx) => (
             <div
-              key={ep.id}
-              className="card"
+              key={ep.youtubeId}
+              className={`surface-white motion-reveal motion-delay-${(idx % 4) + 1}`}
               style={{
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                padding: '24px',
-                border: '1px solid var(--color-border-card)',
-                transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+                padding: '24px'
               }}
             >
               <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                  <span className="pill pill-pink" style={{ fontSize: '0.78rem', padding: '4px 10px' }}>
-                    {ep.topic}
-                  </span>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--color-grey-muted)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <IconClock size={14} /> {ep.duration}
+                {/* Real Video Thumbnail */}
+                <div
+                  onClick={() => handlePlayEpisode(ep)}
+                  style={{
+                    position: 'relative',
+                    width: '100%',
+                    aspectRatio: '16 / 9',
+                    borderRadius: 'var(--radius-sm)',
+                    overflow: 'hidden',
+                    marginBottom: '16px',
+                    backgroundColor: 'var(--color-black)',
+                    cursor: 'pointer'
+                  }}
+                  title="Click to play in featured player"
+                >
+                  <img
+                    src={`https://i.ytimg.com/vi/${ep.youtubeId}/hqdefault.jpg`}
+                    alt={ep.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    loading="lazy"
+                  />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      inset: 0,
+                      backgroundColor: 'rgba(0,0,0,0.18)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      opacity: 0,
+                      transition: 'opacity 0.2s ease'
+                    }}
+                    className="thumbnail-hover"
+                  >
+                    <div
+                      style={{
+                        width: '44px',
+                        height: '44px',
+                        borderRadius: '50%',
+                        backgroundColor: 'var(--color-pink)',
+                        color: '#0C0C0D',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                    >
+                      <IconPlay size={20} />
+                    </div>
+                  </div>
+                  <span
+                    style={{
+                      position: 'absolute',
+                      bottom: '8px',
+                      right: '8px',
+                      backgroundColor: 'rgba(12, 12, 13, 0.85)',
+                      color: '#FFFFFF',
+                      padding: '2px 8px',
+                      borderRadius: '4px',
+                      fontSize: '12px',
+                      fontWeight: 600
+                    }}
+                  >
+                    {ep.duration}
                   </span>
                 </div>
 
-                <h4 style={{ fontSize: '1.12rem', marginBottom: '8px', lineHeight: 1.35, color: 'var(--color-black)' }}>
+                <h3
+                  style={{
+                    fontSize: '1.15rem',
+                    marginBottom: '8px',
+                    lineHeight: 1.3,
+                    color: 'var(--color-black)',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden'
+                  }}
+                  title={ep.title}
+                >
                   {ep.title}
-                </h4>
+                </h3>
 
-                <p style={{ fontSize: '0.88rem', color: '#55555C', lineHeight: 1.55, marginBottom: '18px' }}>
+                <div style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '12px', flexWrap: 'wrap' }}>
+                  <span
+                    style={{
+                      fontSize: '13px',
+                      fontWeight: 600,
+                      backgroundColor: '#FFFFFF',
+                      border: '1px solid var(--color-border)',
+                      padding: '3px 10px',
+                      borderRadius: 'var(--radius-pill)',
+                      color: 'var(--color-black)'
+                    }}
+                  >
+                    {ep.topic}
+                  </span>
+                  <span style={{ fontSize: '13px', color: 'var(--color-grey-muted)' }}>
+                    {ep.duration}
+                  </span>
+                  <span style={{ color: 'var(--color-grey-muted)' }}>·</span>
+                  <span style={{ fontSize: '13px', color: 'var(--color-grey-muted)' }}>
+                    {ep.views} views
+                  </span>
+                </div>
+
+                <p
+                  style={{
+                    fontSize: '14px',
+                    color: '#3A3A42',
+                    lineHeight: 1.55,
+                    marginBottom: '20px',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden'
+                  }}
+                >
                   {ep.summary}
                 </p>
               </div>
@@ -240,41 +368,60 @@ export default function EpisodesSection() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  paddingTop: '14px',
-                  borderTop: '1px solid var(--color-border)'
+                  paddingTop: '14px'
                 }}
               >
-                <span style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--color-grey-muted)', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <IconEye size={15} /> {ep.views} views
-                </span>
+                <button
+                  onClick={() => handlePlayEpisode(ep)}
+                  style={{
+                    fontSize: '14px',
+                    fontWeight: 600,
+                    color: 'var(--color-black)',
+                    textDecoration: 'underline',
+                    padding: 0
+                  }}
+                >
+                  Play episode
+                </button>
 
                 <a
-                  href={`https://www.youtube.com/@unfilteredwithwandia`}
+                  href={`https://www.youtube.com/watch?v=${ep.youtubeId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    fontSize: '0.88rem',
+                    fontSize: '14px',
                     fontWeight: 600,
-                    color: 'var(--color-black)',
+                    color: 'var(--color-grey-muted)',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '6px'
+                    gap: '4px'
                   }}
                 >
-                  <IconPlay size={14} /> Watch Clip
+                  <IconYoutube size={14} /> YouTube
                 </a>
               </div>
             </div>
           ))}
         </div>
 
+        {/* View All / Collapse Episodes Toggle */}
+        {filteredEpisodes.length > 6 && (
+          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <button
+              onClick={() => setShowAllEpisodes(!showAllEpisodes)}
+              className="btn-secondary"
+              style={{ padding: '13px 32px' }}
+            >
+              {showAllEpisodes ? `Show Fewer Episodes` : `View All ${filteredEpisodes.length} Real Episodes`}
+            </button>
+          </div>
+        )}
+
         {/* Subscribe Banner */}
         <div
+          className="surface-dark"
           style={{
-            backgroundColor: 'var(--color-black)',
-            color: '#FFFFFF',
-            borderRadius: 'var(--radius-lg)',
-            padding: '36px 30px',
+            padding: '36px 32px',
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
@@ -283,11 +430,11 @@ export default function EpisodesSection() {
           }}
         >
           <div>
-            <h3 style={{ color: '#FFFFFF', fontSize: '1.35rem', marginBottom: '6px' }}>
+            <h3 style={{ color: '#FFFFFF', fontSize: '1.4rem', marginBottom: '6px' }}>
               Never miss a conversation.
             </h3>
-            <p style={{ color: '#A0A0A8', fontSize: '0.95rem', margin: 0 }}>
-              Join 430+ growing subscribers tuning into honest Kenyan stories every week.
+            <p style={{ color: '#A0A0A8', fontSize: 'var(--type-body)', margin: 0 }}>
+              Join 450+ growing subscribers tuning into honest Kenyan stories every week.
             </p>
           </div>
 
@@ -297,7 +444,6 @@ export default function EpisodesSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
-              style={{ fontSize: '0.95rem', padding: '14px 26px' }}
             >
               <IconYoutube size={20} /> Subscribe on YouTube
             </a>
@@ -312,8 +458,8 @@ export default function EpisodesSection() {
             grid-template-columns: 1.25fr 0.95fr !important;
           }
         }
-        .play-btn-pulse:hover {
-          transform: scale(1.1);
+        .thumbnail-hover:hover {
+          opacity: 1 !important;
         }
       `}</style>
     </section>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { PODCAST_DATA } from '../data/podcastData';
-import { IconArrowRight, IconPlay, IconMicrophone } from './Icons';
+import { IconArrowRight, IconPlay } from './Icons';
 
-export default function Hero({ onSelectEpisode }) {
+export default function Hero() {
   const scrollTo = (id) => {
     const el = document.querySelector(id);
     if (el) {
@@ -21,61 +21,26 @@ export default function Hero({ onSelectEpisode }) {
       <div className="container">
         <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '48px', alignItems: 'center' }}>
           
-          {/* Left Column: Words & Intent */}
+          {/* Left Column: Focused Copy & Action */}
           <div style={{ maxWidth: '640px' }}>
             
-            {/* Tagline Badge */}
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '6px 16px',
-                borderRadius: 'var(--radius-pill)',
-                backgroundColor: 'var(--color-white)',
-                border: '1px solid var(--color-border)',
-                marginBottom: '24px'
-              }}
-            >
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--color-pink)' }} />
-              <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-black)', letterSpacing: '0.02em' }}>
-                KENYAN YOUTUBE CONVERSATION SPACE
-              </span>
-            </div>
-
-            {/* Headline */}
-            <h1 style={{ marginBottom: '22px', letterSpacing: '-0.03em', lineHeight: 1.12 }}>
+            {/* Headline: strictly 2 lines at all widths, confident display scale */}
+            <h1 style={{ marginBottom: '24px', letterSpacing: '-0.03em', lineHeight: 1.08 }}>
               Real stories. <br />
-              <span style={{ position: 'relative', display: 'inline-block' }}>
-                Real conversations.
-                <span
-                  style={{
-                    position: 'absolute',
-                    bottom: '4px',
-                    left: 0,
-                    width: '100%',
-                    height: '10px',
-                    backgroundColor: 'var(--color-pink)',
-                    zIndex: -1,
-                    opacity: 0.85,
-                    borderRadius: '4px'
-                  }}
-                />
-              </span> <br />
-              Real growth.
+              <span style={{ color: '#0C0C0D' }}>Real growth.</span>
             </h1>
 
-            {/* Supporting Copy */}
-            <p style={{ fontSize: '1.15rem', lineHeight: 1.65, color: '#2B2B30', marginBottom: '36px' }}>
+            {/* Supporting Sentence */}
+            <p className="text-lead motion-reveal motion-delay-1" style={{ marginBottom: '36px', maxWidth: '54ch' }}>
               {PODCAST_DATA.brand.description}
             </p>
 
             {/* Dual CTAs */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center', marginBottom: '32px' }}>
+            <div className="motion-reveal motion-delay-2" style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', alignItems: 'center', marginBottom: '32px' }}>
               <button
                 onClick={() => scrollTo('#partner')}
                 className="btn-primary"
-                style={{ fontSize: '1.02rem', padding: '16px 32px' }}
+                style={{ fontSize: '1.02rem', padding: '16px 34px' }}
               >
                 Partner With Us
                 <IconArrowRight size={18} />
@@ -84,113 +49,49 @@ export default function Hero({ onSelectEpisode }) {
               <button
                 onClick={() => scrollTo('#guest')}
                 className="btn-secondary"
-                style={{ fontSize: '1.02rem', padding: '16px 32px' }}
+                style={{ fontSize: '1.02rem', padding: '16px 34px' }}
               >
                 Be a Guest
               </button>
             </div>
 
-            {/* Interactive Audio Waveform & Latest Episode Teaser */}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '16px',
-                padding: '12px 18px',
-                borderRadius: 'var(--radius-md)',
-                backgroundColor: 'rgba(255, 255, 255, 0.75)',
-                border: '1px solid var(--color-border)',
-                width: 'fit-content'
-              }}
-            >
-              {/* Animated audio bars */}
-              <div style={{ display: 'flex', alignItems: 'flex-end', gap: '3px', height: '22px' }}>
+            {/* Natural context note with active live broadcast waveform */}
+            <div className="motion-reveal motion-delay-3" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '3px', height: '14px' }} title="Live studio broadcast audio">
                 <span className="audio-bar" style={{ animationDelay: '0.1s' }} />
-                <span className="audio-bar" style={{ animationDelay: '0.3s' }} />
-                <span className="audio-bar" style={{ animationDelay: '0.2s' }} />
                 <span className="audio-bar" style={{ animationDelay: '0.4s' }} />
-                <span className="audio-bar" style={{ animationDelay: '0.15s' }} />
+                <span className="audio-bar" style={{ animationDelay: '0.2s' }} />
+                <span className="audio-bar" style={{ animationDelay: '0.5s' }} />
               </div>
-
-              <div style={{ fontSize: '0.88rem', color: 'var(--color-black)' }}>
-                <span style={{ fontWeight: 600 }}>Latest Episode: </span>
-                <a
-                  href="#episodes"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollTo('#episodes');
-                  }}
-                  style={{ textDecoration: 'underline', color: '#0C0C0D', fontWeight: 500 }}
-                >
-                  Living with Scars — Tina's Story
-                </a>
-              </div>
+              <span style={{ fontSize: 'var(--type-small)', color: 'var(--color-grey-muted)', fontWeight: 500 }}>
+                Hosted by Wandia · Recorded in Nairobi · Uncut 40–70 min conversations
+              </span>
             </div>
 
           </div>
 
-          {/* Right Column: Wandia's Real Portrait in Media Kit Offset Frame */}
-          <div style={{ display: 'flex', justifyContent: 'center', position: 'relative' }}>
-            <div className="offset-frame-wrapper" style={{ maxWidth: '440px', width: '100%' }}>
-              
-              {/* Offset solid black frame backing */}
-              <div className="offset-frame-backing" />
-
-              {/* Foreground Image Card */}
-              <div className="offset-frame-content">
-                <img
-                  src={PODCAST_DATA.brand.portraitUrl}
-                  alt="Wandia - Host of Unfiltered with Wandia"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    aspectRatio: '580 / 870',
-                    objectFit: 'cover',
-                    display: 'block'
-                  }}
-                />
-
-                {/* Overlaid Host Tag */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: '18px',
-                    left: '18px',
-                    right: '18px',
-                    backgroundColor: 'rgba(12, 12, 13, 0.90)',
-                    backdropFilter: 'blur(8px)',
-                    color: '#FFFFFF',
-                    padding: '14px 18px',
-                    borderRadius: 'var(--radius-sm)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    border: '1px solid rgba(255, 255, 255, 0.12)'
-                  }}
-                >
-                  <div>
-                    <div style={{ fontSize: '1rem', fontWeight: 700, color: '#FFFFFF' }}>Wandia</div>
-                    <div style={{ fontSize: '0.78rem', color: 'var(--color-pink)', fontWeight: 500 }}>
-                      Creator & Host · Nairobi, Kenya
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      width: '36px',
-                      height: '36px',
-                      borderRadius: '50%',
-                      backgroundColor: 'var(--color-pink)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#0C0C0D'
-                    }}
-                  >
-                    <IconMicrophone size={18} />
-                  </div>
-                </div>
-              </div>
-
+          {/* Right Column: Wandia's Real Portrait (Dominant focal point) */}
+          <div className="motion-reveal motion-delay-2" style={{ display: 'flex', justifyContent: 'center' }}>
+            <div
+              style={{
+                maxWidth: '460px',
+                width: '100%',
+                borderRadius: 'var(--radius-lg)',
+                overflow: 'hidden',
+                backgroundColor: 'var(--color-black)'
+              }}
+            >
+              <img
+                src={PODCAST_DATA.brand.portraitUrl}
+                alt="Wandia, host of Unfiltered with Wandia"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  aspectRatio: '580 / 870',
+                  objectFit: 'cover',
+                  display: 'block'
+                }}
+              />
             </div>
           </div>
 
@@ -202,18 +103,6 @@ export default function Hero({ onSelectEpisode }) {
           .hero-grid {
             grid-template-columns: 1.15fr 0.85fr !important;
           }
-        }
-        .audio-bar {
-          display: inline-block;
-          width: 3px;
-          height: 100%;
-          background-color: var(--color-black);
-          border-radius: 2px;
-          animation: danceBars 1s ease-in-out infinite alternate;
-        }
-        @keyframes danceBars {
-          0% { height: 4px; }
-          100% { height: 22px; }
         }
       `}</style>
     </section>

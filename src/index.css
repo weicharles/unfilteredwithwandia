@@ -1,32 +1,39 @@
-/* Unfiltered with Wandia — Anti-Slop Design System */
+/* Unfiltered with Wandia — Anti-Slop Editorial Design System */
 :root {
-  --color-cream: #F6F2EE;
+  --color-page: #FFFFFF;
+  --color-surface: #F4F4F6;
+  --color-surface-hover: #ECECF0;
+  --color-surface-subtle: #FAFAFC;
+  --color-sand: #F4F4F6;
+  --color-cream: #FFFFFF;
   --color-white: #FFFFFF;
   --color-black: #0C0C0D;
-  --color-black-elevated: #161618;
   --color-pink: #F29FC4;
   --color-pink-hover: #E88CB4;
-  --color-pink-soft: rgba(242, 159, 196, 0.15);
-  --color-grey-muted: #7E7E88;
-  --color-grey-light: #E8E3DE;
-  --color-border: rgba(12, 12, 13, 0.09);
-  --color-border-card: rgba(12, 12, 13, 0.07);
-  --color-whatsapp: #25D366;
-  --color-whatsapp-hover: #20BA5A;
+  --color-pink-soft: rgba(242, 159, 196, 0.22);
+  --color-grey-dark: #1E1E22;
+  --color-grey-body: #1E1E22;
+  --color-grey-muted: #52525A;
+  --color-border: #E8E8ED;
+  --color-border-subtle: #F0F0F4;
+  --color-whatsapp: #1EBE5D;
+  --color-whatsapp-hover: #18A34F;
 
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-pill: 9999px;
 
-  --shadow-subtle: 0 4px 20px -2px rgba(12, 12, 13, 0.05);
-  --shadow-hover: 0 10px 30px -4px rgba(12, 12, 13, 0.10);
-  --shadow-offset: 12px 12px 0px #0C0C0D;
-  --shadow-offset-pink: 10px 10px 0px #F29FC4;
-
   --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --container-max: 1200px;
   --nav-height: 80px;
+
+  /* Strict 5-step typographic scale */
+  --type-display: clamp(42px, 5.8vw, 76px);
+  --type-heading: clamp(28px, 3.2vw, 42px);
+  --type-subhead: clamp(20px, 1.8vw, 24px);
+  --type-body: 17px;
+  --type-small: 14px;
 }
 
 *, *::before, *::after {
@@ -38,7 +45,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  background-color: var(--color-cream);
+  background-color: var(--color-page);
   color: var(--color-black);
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
@@ -47,16 +54,17 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: var(--color-cream);
+  background-color: var(--color-page);
   color: var(--color-black);
   line-height: 1.6;
   overflow-x: hidden;
+  font-size: var(--type-body);
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 button {
@@ -64,7 +72,7 @@ button {
   cursor: pointer;
   border: none;
   background: none;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 img, video {
@@ -73,14 +81,14 @@ img, video {
   display: block;
 }
 
-/* Container & Layout Utilities */
+/* Container & Consistent Symmetric Margins */
 .container {
   width: 100%;
   max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .section {
@@ -91,48 +99,59 @@ img, video {
 
 @media (max-width: 768px) {
   .section {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .container {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
-/* Typography Standards */
-h1, h2, h3, h4, h5, h6 {
+/* Typography Standards: 2 lines max on all headlines, high contrast */
+h1, h2, h3, h4 {
   font-weight: 700;
-  line-height: 1.18;
+  line-height: 1.15;
   color: var(--color-black);
   letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: clamp(2.3rem, 5.2vw, 3.8rem);
+  font-size: var(--type-display);
   font-weight: 800;
+  line-height: 1.08;
+  max-width: 22ch;
 }
 
 h2 {
-  font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+  font-size: var(--type-heading);
+  line-height: 1.18;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-size: var(--type-subhead);
+  line-height: 1.25;
 }
 
 p {
-  color: #2D2D32;
-  font-size: 1.05rem;
-  line-height: 1.68;
+  color: var(--color-grey-body);
+  font-size: var(--type-body);
+  line-height: 1.65;
+  max-width: 62ch;
 }
 
-.text-muted {
+.text-lead {
+  font-size: 1.18rem;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.text-small {
+  font-size: var(--type-small);
   color: var(--color-grey-muted);
 }
 
-/* Buttons - strictly adhering to the design system rule */
-/* Primary: Pink fill with black text */
+/* Buttons: Strictly flat fills, no shadow, black text on pink */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -141,24 +160,18 @@ p {
   background-color: var(--color-pink);
   color: #0C0C0D;
   font-weight: 600;
-  font-size: 1rem;
-  padding: 14px 28px;
+  font-size: 16px;
+  padding: 14px 30px;
   border-radius: var(--radius-pill);
   min-height: 50px;
-  box-shadow: 0 4px 14px rgba(242, 159, 196, 0.4);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-primary:hover {
   background-color: var(--color-pink-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(242, 159, 196, 0.6);
+  transform: translateY(-1px);
 }
 
-.btn-primary:active {
-  transform: translateY(0);
-}
-
-/* Secondary: Solid black fill with white text */
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -167,45 +180,40 @@ p {
   background-color: var(--color-black);
   color: #FFFFFF;
   font-weight: 600;
-  font-size: 1rem;
-  padding: 14px 28px;
+  font-size: 16px;
+  padding: 14px 30px;
   border-radius: var(--radius-pill);
   min-height: 50px;
-  border: 1px solid var(--color-black);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-secondary:hover {
-  background-color: #222225;
-  color: #FFFFFF;
-  transform: translateY(-2px);
+  background-color: #242428;
+  transform: translateY(-1px);
 }
 
-.btn-secondary:active {
-  transform: translateY(0);
-}
-
-/* Outline Button */
 .btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: transparent;
-  color: var(--color-black);
+  background-color: var(--color-black);
+  color: #FFFFFF;
   font-weight: 600;
-  font-size: 0.95rem;
-  padding: 12px 24px;
+  font-size: 15px;
+  padding: 13px 26px;
   border-radius: var(--radius-pill);
   min-height: 48px;
   border: 1.5px solid var(--color-black);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-outline:hover {
-  background-color: var(--color-black);
+  background-color: #242428;
   color: #FFFFFF;
+  transform: translateY(-1px);
 }
 
-/* WhatsApp Button */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
@@ -214,128 +222,125 @@ p {
   background-color: var(--color-whatsapp);
   color: #FFFFFF;
   font-weight: 600;
-  font-size: 1rem;
-  padding: 14px 26px;
+  font-size: 16px;
+  padding: 14px 28px;
   border-radius: var(--radius-pill);
   min-height: 50px;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+  transition: background-color 0.2s ease;
 }
 
 .btn-whatsapp:hover {
   background-color: var(--color-whatsapp-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
 }
 
-/* Signature Cards */
-.card {
-  background-color: var(--color-white);
+/* Surfaces: Defined strictly by flat tone fills, zero box-shadow at rest */
+.surface-white,
+.surface-card {
+  background-color: var(--color-surface);
   border-radius: var(--radius-md);
-  border: 1px solid var(--color-border-card);
-  padding: 32px;
-  box-shadow: var(--shadow-subtle);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding: 36px;
 }
 
-.card:hover {
-  box-shadow: var(--shadow-hover);
+.surface-sand {
+  background-color: var(--color-surface-hover);
+  border-radius: var(--radius-md);
+  padding: 36px;
 }
 
-/* Dark Card (Featured) */
-.card-dark {
+.surface-dark {
   background-color: var(--color-black);
   color: #FFFFFF;
   border-radius: var(--radius-md);
-  padding: 32px;
-  border: 1px solid #2A2A2E;
-  position: relative;
-  overflow: hidden;
+  padding: 36px;
 }
 
-.card-dark h3, .card-dark p, .card-dark span {
+.surface-dark h2, .surface-dark h3, .surface-dark h4, .surface-dark p, .surface-dark span {
   color: #FFFFFF;
 }
 
-/* Offset Frame Style (from Media Kit branding) */
-.offset-frame-wrapper {
-  position: relative;
+/* Topic Pills */
+.topic-pill {
   display: inline-block;
-}
-
-.offset-frame-backing {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-black);
-  border-radius: var(--radius-lg);
-  z-index: 1;
-}
-
-.offset-frame-content {
-  position: relative;
-  z-index: 2;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background-color: var(--color-white);
-  border: 2px solid var(--color-black);
-}
-
-/* Pill Badges */
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
   color: var(--color-black);
   padding: 8px 18px;
   border-radius: var(--radius-pill);
-  font-size: 0.9rem;
+  font-size: var(--type-small);
   font-weight: 500;
-  border: 1px solid var(--color-border);
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
-.pill:hover {
-  border-color: var(--color-black);
-  transform: translateY(-1px);
+.topic-pill:hover {
+  background-color: var(--color-surface-hover);
 }
 
-.pill-pink {
-  background-color: var(--color-pink-soft);
-  color: #8C2250;
-  border-color: rgba(242, 159, 196, 0.4);
-}
-
-/* Floating WhatsApp Button */
+/* Floating WhatsApp button */
 .floating-whatsapp {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: 24px;
+  right: 24px;
   z-index: 99;
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background-color: var(--color-whatsapp);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 16px rgba(30, 190, 93, 0.35);
+  transition: transform 0.2s ease;
 }
 
 .floating-whatsapp:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+  transform: scale(1.06);
 }
 
-@media (max-width: 600px) {
-  .floating-whatsapp {
-    bottom: 20px;
-    right: 20px;
-    width: 52px;
-    height: 52px;
+/* Motion Layer: CSS Keyframe Entrances (Snappy 0.35s) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0.2;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.motion-reveal {
+  animation: fadeInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.motion-delay-1 { animation-delay: 0.05s; }
+.motion-delay-2 { animation-delay: 0.1s; }
+.motion-delay-3 { animation-delay: 0.15s; }
+.motion-delay-4 { animation-delay: 0.2s; }
+
+/* Live Audio Broadcast Waveform */
+@keyframes waveform {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 14px;
+  }
+}
+
+.audio-bar {
+  display: inline-block;
+  width: 3px;
+  height: 8px;
+  background-color: var(--color-black);
+  border-radius: 2px;
+  animation: waveform 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reveal {
+    animation: none !important;
+  }
+  button, .btn-primary, .btn-secondary, .floating-whatsapp {
+    transition: none !important;
   }
 }

@@ -1,0 +1,3355 @@
+{
+ "url": "http://localhost:5173/",
+ "at": "2026-10-26T11:07:38.873Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.37,
+    0.52,
+    0.66,
+    0.77,
+    0.63,
+    0.93,
+    0.71,
+    0.71,
+    0.68,
+    0.77,
+    0.78,
+    0.48
+   ],
+   "motion": {
+    "elements": 29,
+    "css": 28,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 11432,
+     "screens": 12.7,
+     "words": 1583,
+     "img": 17,
+     "video": 0,
+     "canvas": 0,
+     "svg": 26,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 14,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "wandia_portrait.png",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "wandia_portrait.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Real stories. Real growth.",
+     "words": 4,
+     "chars": 26,
+     "lines": 2,
+     "size": 76,
+     "vw": 5.3,
+     "font": "Poppins",
+     "weight": 800,
+     "tracking": -0.03,
+     "leading": 1.08,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.44,
+     "top": 252,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Real stories. Real growth.",
+     "words": 4,
+     "lines": 2,
+     "size": 76,
+     "font": "Poppins"
+    },
+    "headings": [
+     {
+      "text": "Real stories. Real growth.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 76,
+      "vw": 5.3,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 252,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "A growing, attentive audience.",
+      "words": 4,
+      "chars": 30,
+      "lines": 1,
+      "size": 42,
+      "vw": 2.9,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 880,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "450+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 1026,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "418.5",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 1026,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "5.5K+",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.16,
+      "top": 1026,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "22",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 51.2,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.16,
+      "top": 1026,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Meet Wandia.",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 42,
+      "vw": 2.9,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.42,
+      "top": 1561,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "“For anyone who has been through something and needs to hear they are not alone.”",
+      "words": 15,
+      "chars": 81,
+      "lines": 3,
+      "size": 35.2,
+      "vw": 2.4,
+      "font": "Poppins",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.4,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.53,
+      "top": 2253,
+      "tag": "blockquote",
+      "kind": "statement"
+     },
+     {
+      "text": "Watch the conversations.",
+      "words": 3,
+      "chars": 24,
+      "lines": 1,
+      "size": 42,
+      "vw": 2.9,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.47,
+      "top": 2616,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Behind the scenes.",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 42,
+      "vw": 2.9,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 4705,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sponsor real conversations.",
+      "words": 3,
+      "chars": 27,
+      "lines": 1,
+      "size": 42,
+      "vw": 2.9,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.57,
+      "top": 6004,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sponsorship Packages",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.79,
+      "top": 6424,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 1,500",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 2.3,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.15,
+      "top": 6624,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 5,000",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 2.3,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.15,
+      "top": 6624,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 10,000",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 2.3,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.15,
+      "top": 6624,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 20,000+",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 2.3,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.15,
+      "top": 6624,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Download Our 2026 Media Kit",
+      "words": 5,
+      "chars": 27,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 7746,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Share your story.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 42,
+      "vw": 2.9,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.54,
+      "top": 8598,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions, answered.",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 42,
+      "vw": 2.9,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.56,
+      "top": 10095,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Let's build something real together.",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 42,
+      "vw": 2.9,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 10919,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 20,
+     "maxLines": 3,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      25,
+      29,
+      34,
+      35,
+      42,
+      51,
+      76
+     ],
+     "sizeCount": 18,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 17,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.7
+     },
+     "measureChars": 95,
+     "max": {
+      "size": 76,
+      "vw": 5.3,
+      "font": "Poppins",
+      "text": "Real stories."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0c0c0d",
+       "top": 2181,
+       "hsl": {
+        "h": 240,
+        "s": 0.04,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 2516,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#f4f4f6",
+       "top": 2772,
+       "hsl": {
+        "h": 240,
+        "s": 0.1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#fafafc",
+       "top": 4605,
+       "hsl": {
+        "h": 240,
+        "s": 0.25,
+        "l": 0.98
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0c0c0d",
+       "share": 0.26
+      },
+      {
+       "color": "#3a3a42",
+       "share": 0.14
+      },
+      {
+       "color": "#52525a",
+       "share": 0.13
+      },
+      {
+       "color": "#4e4e56",
+       "share": 0.08
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#0c0c0d",
+      "hsl": {
+       "h": 240,
+       "s": 0.04,
+       "l": 0.05
+      },
+      "fg": "#0c0c0d"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 27,
+     "inHero": 3,
+     "radius": "pill",
+     "height": 50,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Partner With Us",
+      "Partner With Us",
+      "Be a Guest"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 7,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 42,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 14,
+     "mediaRadius": 14,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 998
+      },
+      {
+       "count": 6,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 3278
+      },
+      {
+       "count": 6,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4864
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6556
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.24
+     }
+    ],
+    "nav": {
+     "links": 8,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "poppins"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 11432,
+    "margins": {
+     "left": 148,
+     "right": 156
+    },
+    "sections": [
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 80,
+      "height": 800,
+      "words": 45,
+      "media": 1,
+      "middle": 70,
+      "heading": {
+       "text": "Real stories.",
+       "size": 76,
+       "tag": "h1"
+      },
+      "left": 148,
+      "right": 151,
+      "textLeft": 148,
+      "textRight": 681,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section",
+      "tag": "section",
+      "top": 880,
+      "height": 631,
+      "words": 66,
+      "media": 0,
+      "middle": 121,
+      "heading": {
+       "text": "450+",
+       "size": 51,
+       "tag": "div"
+      },
+      "left": 148,
+      "right": 243,
+      "textLeft": 148,
+      "textRight": 243,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.section",
+      "tag": "section",
+      "top": 1511,
+      "height": 1005,
+      "words": 155,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Meet Wandia.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 186,
+      "right": 149,
+      "textLeft": 186,
+      "textRight": 149,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#episodes.section",
+      "tag": "section",
+      "top": 2516,
+      "height": 2088,
+      "words": 348,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "Watch the conversations.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 148,
+      "right": 172,
+      "textLeft": 148,
+      "textRight": 172,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#gallery.section",
+      "tag": "section",
+      "top": 4605,
+      "height": 1300,
+      "words": 116,
+      "media": 6,
+      "middle": 20,
+      "heading": {
+       "text": "Behind the scenes.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 148,
+      "right": 148,
+      "textLeft": 148,
+      "textRight": 181,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#partner.section",
+      "tag": "section",
+      "top": 5904,
+      "height": 2594,
+      "words": 496,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Sponsor real conversations.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 148,
+      "right": 153,
+      "textLeft": 148,
+      "textRight": 153,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#guest.section",
+      "tag": "section",
+      "top": 8498,
+      "height": 1496,
+      "words": 193,
+      "media": 0,
+      "middle": 23,
+      "heading": {
+       "text": "Share your story.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 148,
+      "right": 156,
+      "textLeft": 148,
+      "textRight": 156,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#faq.section",
+      "tag": "section",
+      "top": 9995,
+      "height": 844,
+      "words": 109,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions, answered.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 318,
+      "right": 318,
+      "textLeft": 318,
+      "textRight": 341,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 10839,
+      "height": 593,
+      "words": 59,
+      "media": 0,
+      "middle": 86,
+      "heading": {
+       "text": "Let's build something real together.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 148,
+      "right": 148,
+      "textLeft": 148,
+      "textRight": 148,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Real stories. Real growth.",
+      "size": 76,
+      "top": 252,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 148,
+      "n": 17
+     },
+     {
+      "x": 171,
+      "n": 13
+     },
+     {
+      "x": 561,
+      "n": 6
+     },
+     {
+      "x": 951,
+      "n": 6
+     },
+     {
+      "x": 184,
+      "n": 5
+     },
+     {
+      "x": 682,
+      "n": 4
+     },
+     {
+      "x": 463,
+      "n": 3
+     },
+     {
+      "x": 753,
+      "n": 3
+     },
+     {
+      "x": 1044,
+      "n": 3
+     },
+     {
+      "x": 318,
+      "n": 2
+     },
+     {
+      "x": 540,
+      "n": 2
+     },
+     {
+      "x": 716,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 71,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.07,
+    "voidBox": {
+     "x": 0,
+     "y": 720,
+     "w": 780,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.41,
+    0.62,
+    0.76,
+    0.82,
+    0.79,
+    0.82,
+    0.93,
+    0.81,
+    0.72,
+    0.82,
+    0.69,
+    0.92
+   ],
+   "motion": {
+    "elements": 29,
+    "css": 28,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 14504,
+     "screens": 14.2,
+     "words": 1569,
+     "img": 17,
+     "video": 0,
+     "canvas": 0,
+     "svg": 26,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 14,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "wandia_portrait.png",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "wandia_portrait.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Real stories. Real growth.",
+     "words": 4,
+     "chars": 26,
+     "lines": 2,
+     "size": 44.5,
+     "vw": 5.8,
+     "font": "Poppins",
+     "weight": 800,
+     "tracking": -0.03,
+     "leading": 1.08,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.83,
+     "top": 120,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Real stories. Real growth.",
+     "words": 4,
+     "lines": 2,
+     "size": 44.5,
+     "font": "Poppins"
+    },
+    "headings": [
+     {
+      "text": "Real stories. Real growth.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 44.5,
+      "vw": 5.8,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 120,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "A growing, attentive audience.",
+      "words": 4,
+      "chars": 30,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 1286,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "450+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 5,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 1415,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "418.5",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 5,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.24,
+      "top": 1415,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "5.5K+",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 5,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.24,
+      "top": 1415,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "22",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 5,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 1587,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Meet Wandia.",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 2618,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Watch the conversations.",
+      "words": 3,
+      "chars": 24,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 3458,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Behind the scenes.",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.83,
+      "top": 6322,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sponsor real conversations.",
+      "words": 3,
+      "chars": 27,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 7864,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sponsorship Packages",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 3.8,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 8445,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 1,500",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 8645,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 5,000",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.39,
+      "top": 8645,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 10,000",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 9222,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 20,000+",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 4.4,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.39,
+      "top": 9222,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Download Our 2026 Media Kit",
+      "words": 5,
+      "chars": 27,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 3.8,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 10376,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Share your story.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 11592,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions, answered.",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.95,
+      "top": 13198,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Let's build something real together.",
+      "words": 5,
+      "chars": 36,
+      "lines": 1,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.81,
+      "top": 13966,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 19,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      28,
+      29,
+      34,
+      38,
+      45
+     ],
+     "sizeCount": 16,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 17,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.7
+     },
+     "measureChars": 86,
+     "max": {
+      "size": 44.5,
+      "vw": 5.8,
+      "font": "Poppins",
+      "text": "Real stories."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0c0c0d",
+       "top": 526,
+       "hsl": {
+        "h": 240,
+        "s": 0.04,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#f4f4f6",
+       "top": 2109,
+       "hsl": {
+        "h": 240,
+        "s": 0.1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 3398,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#fafafc",
+       "top": 6262,
+       "hsl": {
+        "h": 240,
+        "s": 0.25,
+        "l": 0.98
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0c0c0d",
+       "share": 0.25
+      },
+      {
+       "color": "#3a3a42",
+       "share": 0.14
+      },
+      {
+       "color": "#52525a",
+       "share": 0.13
+      },
+      {
+       "color": "#4e4e56",
+       "share": 0.08
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#0c0c0d",
+      "hsl": {
+       "h": 240,
+       "s": 0.04,
+       "l": 0.05
+      },
+      "fg": "#0c0c0d"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 26,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 50,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Partner With Us",
+      "Be a Guest"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 7,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 42,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 14,
+     "mediaRadius": 14,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1387
+      },
+      {
+       "count": 6,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4431
+      },
+      {
+       "count": 6,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 6465
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 8577
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.29
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "poppins"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 14504,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 80,
+      "height": 1206,
+      "words": 45,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Real stories.",
+       "size": 45,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 113,
+      "textLeft": 20,
+      "textRight": 113,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section",
+      "tag": "section",
+      "top": 1286,
+      "height": 773,
+      "words": 66,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "450+",
+       "size": 38,
+       "tag": "div"
+      },
+      "left": 20,
+      "right": 57,
+      "textLeft": 20,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.section",
+      "tag": "section",
+      "top": 2059,
+      "height": 1339,
+      "words": 155,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Meet Wandia.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 64,
+      "textLeft": 20,
+      "textRight": 64,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#episodes.section",
+      "tag": "section",
+      "top": 3398,
+      "height": 2864,
+      "words": 348,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "Watch the conversations.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 44,
+      "textLeft": 20,
+      "textRight": 44,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#gallery.section",
+      "tag": "section",
+      "top": 6262,
+      "height": 1542,
+      "words": 116,
+      "media": 6,
+      "middle": 0,
+      "heading": {
+       "text": "Behind the scenes.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 45,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#partner.section",
+      "tag": "section",
+      "top": 7804,
+      "height": 3728,
+      "words": 496,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "KSh 1,500",
+       "size": 34,
+       "tag": "div"
+      },
+      "left": 20,
+      "right": 29,
+      "textLeft": 20,
+      "textRight": 29,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#guest.section",
+      "tag": "section",
+      "top": 11532,
+      "height": 1606,
+      "words": 193,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Share your story.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 42,
+      "textLeft": 20,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#faq.section",
+      "tag": "section",
+      "top": 13138,
+      "height": 748,
+      "words": 109,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions, answered.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 63,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 13886,
+      "height": 618,
+      "words": 59,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Let's build something real together.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Real stories. Real growth.",
+      "size": 45,
+      "top": 120,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 24
+     },
+     {
+      "x": 43,
+      "n": 22
+     },
+     {
+      "x": 420,
+      "n": 12
+     },
+     {
+      "x": 56,
+      "n": 8
+     },
+     {
+      "x": 400,
+      "n": 2
+     },
+     {
+      "x": 128,
+      "n": 1
+     },
+     {
+      "x": 293,
+      "n": 1
+     },
+     {
+      "x": 541,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 71,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.58,
+    0.78,
+    0.84,
+    0.77,
+    0.68,
+    0.8,
+    0.72,
+    0.86,
+    0.86,
+    0.85,
+    0.91,
+    1
+   ],
+   "motion": {
+    "elements": 29,
+    "css": 28,
+    "transitions": 1,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 21468,
+     "screens": 25.4,
+     "words": 1569,
+     "img": 17,
+     "video": 0,
+     "canvas": 0,
+     "svg": 26,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 14,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "wandia_portrait.png",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "hqdefault.jpg",
+      "wandia_portrait.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Real stories. Real growth.",
+     "words": 4,
+     "chars": 26,
+     "lines": 2,
+     "size": 42,
+     "vw": 10.8,
+     "font": "Poppins",
+     "weight": 800,
+     "tracking": -0.03,
+     "leading": 1.08,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 120,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Real stories. Real growth.",
+     "words": 4,
+     "lines": 2,
+     "size": 42,
+     "font": "Poppins"
+    },
+    "headings": [
+     {
+      "text": "Real stories. Real growth.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 42,
+      "vw": 10.8,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": -0.03,
+      "leading": 1.08,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 120,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "A growing, attentive audience.",
+      "words": 4,
+      "chars": 30,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 1239,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "450+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 9.8,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1429,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "418.5",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 9.8,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1601,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "5.5K+",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 9.8,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1773,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "22",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 38.4,
+      "vw": 9.8,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 1945,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Meet Wandia.",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3258,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "“For anyone who has been through something and needs to hear they are not alone.”",
+      "words": 15,
+      "chars": 81,
+      "lines": 4,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Poppins",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1.4,
+      "upper": false,
+      "italic": true,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 4122,
+      "tag": "blockquote",
+      "kind": "statement"
+     },
+     {
+      "text": "Watch the conversations.",
+      "words": 3,
+      "chars": 24,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 4432,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Never miss a conversation.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.73,
+      "top": 8522,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Behind the scenes.",
+      "words": 3,
+      "chars": 18,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 8902,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sponsor real conversations.",
+      "words": 3,
+      "chars": 27,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 11321,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Sponsorship Packages",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 28.8,
+      "vw": 7.4,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 12202,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Basic",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 12398,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 1,500",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 12430,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Starter",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 12942,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 5,000",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 12974,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Episode Partner",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 13519,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 10,000",
+      "words": 2,
+      "chars": 10,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 13551,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Main Sponsor",
+      "words": 2,
+      "chars": 12,
+      "lines": 1,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 14175,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "KSh 20,000+",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Poppins",
+      "weight": 800,
+      "tracking": 0,
+      "leading": 1.6,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.75,
+      "top": 14207,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Download Our 2026 Media Kit",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 28.8,
+      "vw": 7.4,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 15526,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Send a partnership inquiry.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.25,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.71,
+      "top": 16181,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Share your story.",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 17270,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Questions, answered.",
+      "words": 2,
+      "chars": 20,
+      "lines": 1,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.18,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 19510,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "−",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Poppins",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.03,
+      "top": 19807,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "+",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Poppins",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 20176,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "+",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Poppins",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 20271,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "+",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22.4,
+      "vw": 5.7,
+      "font": "Poppins",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 20365,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Let's build something real together.",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 28,
+      "vw": 7.2,
+      "font": "Poppins",
+      "weight": 700,
+      "tracking": -0.02,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 20559,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 30,
+     "maxLines": 4,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Poppins",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      24,
+      28,
+      29,
+      34,
+      38,
+      42
+     ],
+     "sizeCount": 16,
+     "notLoaded": [],
+     "body": {
+      "font": "Poppins",
+      "size": 17,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.7
+     },
+     "measureChars": 41,
+     "max": {
+      "size": 42,
+      "vw": 10.8,
+      "font": "Poppins",
+      "text": "Real stories."
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.06,
+     "smallText": 3
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#0c0c0d",
+       "top": 644,
+       "hsl": {
+        "h": 240,
+        "s": 0.04,
+        "l": 0.05
+       }
+      },
+      {
+       "color": "#f4f4f6",
+       "top": 2098,
+       "hsl": {
+        "h": 240,
+        "s": 0.1,
+        "l": 0.96
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 4372,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#fafafc",
+       "top": 8842,
+       "hsl": {
+        "h": 240,
+        "s": 0.25,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#ececf0",
+       "top": 19775,
+       "hsl": {
+        "h": 240,
+        "s": 0.12,
+        "l": 0.93
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0c0c0d",
+       "share": 0.25
+      },
+      {
+       "color": "#3a3a42",
+       "share": 0.14
+      },
+      {
+       "color": "#52525a",
+       "share": 0.13
+      },
+      {
+       "color": "#4e4e56",
+       "share": 0.08
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.07
+      }
+     ],
+     "button": {
+      "bg": "#0c0c0d",
+      "hsl": {
+       "h": 240,
+       "s": 0.04,
+       "l": 0.05
+      },
+      "fg": "#0c0c0d"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 26,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 50,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Partner With Us",
+      "Be a Guest"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 7,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 45,
+     "boxRadius": 14,
+     "squareMedia": 0,
+     "roundedMedia": 14,
+     "mediaRadius": 14,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1401
+      },
+      {
+       "count": 6,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5502
+      },
+      {
+       "count": 6,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 9045
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 12362
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.21
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "poppins"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 21468,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "section.section",
+      "tag": "section",
+      "top": 80,
+      "height": 1159,
+      "words": 45,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Real stories.",
+       "size": 42,
+       "tag": "h1"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section",
+      "tag": "section",
+      "top": 1239,
+      "height": 1360,
+      "words": 66,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "450+",
+       "size": 38,
+       "tag": "div"
+      },
+      "left": 20,
+      "right": 50,
+      "textLeft": 20,
+      "textRight": 50,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.container",
+      "tag": "div",
+      "top": 2649,
+      "height": 1321,
+      "words": 136,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "The Show Format",
+       "size": 20,
+       "tag": "h3"
+      },
+      "left": 20,
+      "right": 22,
+      "textLeft": 20,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div",
+      "tag": "div",
+      "top": 4050,
+      "height": 322,
+      "words": 19,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "“For anyone who has been through something and nee",
+       "size": 24,
+       "tag": "blockquote"
+      },
+      "left": 45,
+      "right": 45,
+      "textLeft": 45,
+      "textRight": 45,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#episodes.section",
+      "tag": "section",
+      "top": 4372,
+      "height": 4469,
+      "words": 348,
+      "media": 7,
+      "middle": 0,
+      "heading": {
+       "text": "Watch the conversations.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 21,
+      "textLeft": 20,
+      "textRight": 21,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#gallery.section",
+      "tag": "section",
+      "top": 8842,
+      "height": 2419,
+      "words": 116,
+      "media": 6,
+      "middle": 0,
+      "heading": {
+       "text": "Behind the scenes.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 40,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#partner.section",
+      "tag": "section",
+      "top": 11261,
+      "height": 5949,
+      "words": 496,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "KSh 1,500",
+       "size": 34,
+       "tag": "div"
+      },
+      "left": 20,
+      "right": 33,
+      "textLeft": 20,
+      "textRight": 33,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#guest.section",
+      "tag": "section",
+      "top": 17210,
+      "height": 2240,
+      "words": 193,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Share your story.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 23,
+      "textLeft": 20,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#faq.section",
+      "tag": "section",
+      "top": 19450,
+      "height": 1029,
+      "words": 109,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Questions, answered.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 25,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer",
+      "tag": "footer",
+      "top": 20479,
+      "height": 989,
+      "words": 59,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Let's build something real together.",
+       "size": 28,
+       "tag": "h2"
+      },
+      "left": 20,
+      "right": 23,
+      "textLeft": 20,
+      "textRight": 23,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Real stories. Real growth.",
+      "size": 42,
+      "top": 120,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 43,
+      "n": 36
+     },
+     {
+      "x": 20,
+      "n": 26
+     },
+     {
+      "x": 56,
+      "n": 8
+     },
+     {
+      "x": 128,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 71,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "4 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "18 different font sizes (12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 25, 29, 34, 35, 42, 51, 76).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "measure",
+   "width": 1440,
+   "message": "Longest paragraph runs about 95 characters per line.",
+   "fix": "Cap paragraphs at 45–75 characters (max-width: 60ch)."
+  },
+  {
+   "level": "WARN",
+   "id": "small-text",
+   "width": 1440,
+   "message": "3 text block(s) under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "ragged-edges",
+   "width": 1440,
+   "message": "Left-aligned text starts at 12 different lines (148px, 171px, 561px, 951px, 184px, 682px, 463px); the three most used hold only 51% of it.",
+   "fix": "Pick two or three anchor lines from the grid and start every heading and paragraph on one of them."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\desktop-fold.jpg",
+   "pages": [
+    "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\desktop-page-01.jpg",
+    "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\desktop-page-02.jpg",
+    "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\tablet-fold.jpg",
+   "pages": [
+    "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\tablet-page-01.jpg",
+    "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\mobile-fold.jpg",
+   "pages": [
+    "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\mobile-page-01.jpg",
+    "E:\\UNFILTERED WITH WANDIA\\.taste-skill\\inspect\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

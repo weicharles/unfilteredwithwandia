@@ -22,32 +22,27 @@ export default function Footer() {
         backgroundColor: 'var(--color-black)',
         color: '#FFFFFF',
         paddingTop: '80px',
-        paddingBottom: '40px',
-        borderTop: '1px solid #222228'
+        paddingBottom: '48px'
       }}
     >
       <div className="container">
         
-        {/* Top Call to Action */}
+        {/* Top Call to Action without Eyebrow */}
         <div
           style={{
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: '30px',
-            paddingBottom: '50px',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.12)'
+            gap: '32px',
+            paddingBottom: '56px'
           }}
         >
-          <div style={{ maxWidth: '580px' }}>
-            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-pink)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-              GET IN TOUCH
-            </span>
-            <h2 style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 4vw, 2.8rem)', marginTop: '6px', marginBottom: '12px' }}>
+          <div style={{ maxWidth: '620px' }}>
+            <h2 style={{ color: '#FFFFFF', fontSize: 'var(--type-heading)', marginBottom: '14px', lineHeight: 1.15 }}>
               Let's build something real together.
             </h2>
-            <p style={{ color: '#A0A0A8', fontSize: '1.02rem', margin: 0 }}>
+            <p style={{ color: '#A0A0A8', fontSize: 'var(--type-body)', margin: 0 }}>
               Whether you are an ambitious brand looking to reach an engaged Kenyan audience, or someone ready to tell their story, we'd love to hear from you.
             </p>
           </div>
@@ -56,19 +51,20 @@ export default function Footer() {
             <button
               onClick={() => scrollTo('#partner')}
               className="btn-primary"
-              style={{ padding: '14px 28px', fontSize: '0.98rem' }}
+              style={{ padding: '15px 30px', fontSize: '1rem' }}
             >
               Partner With Us
               <IconArrowRight size={18} />
             </button>
             <button
               onClick={() => scrollTo('#guest')}
-              className="btn-outline"
+              className="btn-secondary"
               style={{
+                backgroundColor: '#202024',
                 color: '#FFFFFF',
-                borderColor: '#FFFFFF',
-                padding: '14px 28px',
-                fontSize: '0.98rem'
+                border: '1.5px solid rgba(255, 255, 255, 0.25)',
+                padding: '15px 30px',
+                fontSize: '1rem'
               }}
             >
               Be a Guest
@@ -77,109 +73,62 @@ export default function Footer() {
         </div>
 
         {/* Middle Direct Contact Blocks */}
+        {/* Direct Contact Channels (Clean typography, unboxed) */}
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-            gap: '24px',
-            paddingTop: '48px',
-            paddingBottom: '48px',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.12)'
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '48px',
+            alignItems: 'baseline',
+            paddingTop: '36px',
+            paddingBottom: '48px'
           }}
         >
-          {/* Email Block */}
-          <a
-            href={`mailto:${PODCAST_DATA.brand.email}`}
-            style={{
-              padding: '20px',
-              borderRadius: 'var(--radius-sm)',
-              backgroundColor: '#161619',
-              border: '1px solid #28282E',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '16px',
-              textDecoration: 'none'
-            }}
-            className="footer-contact-card"
-          >
-            <div style={{ color: 'var(--color-pink)' }}>
-              <IconMail size={24} />
+          <div>
+            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--color-pink)', marginBottom: '4px' }}>
+              Email
             </div>
-            <div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-pink)', letterSpacing: '0.04em' }}>
-                DIRECT EMAIL
-              </div>
-              <div style={{ color: '#FFFFFF', fontSize: '0.92rem', fontWeight: 600 }}>
-                {PODCAST_DATA.brand.email}
-              </div>
-            </div>
-          </a>
+            <a
+              href={`mailto:${PODCAST_DATA.brand.email}`}
+              style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: 600 }}
+            >
+              {PODCAST_DATA.brand.email}
+            </a>
+          </div>
 
-          {/* WhatsApp Block */}
-          <a
-            href={`https://wa.me/${PODCAST_DATA.brand.whatsAppRaw}?text=Hi%20Wandia%2C%20I%20would%20like%20to%20connect...`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              padding: '20px',
-              borderRadius: 'var(--radius-sm)',
-              backgroundColor: '#161619',
-              border: '1px solid #28282E',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '16px',
-              textDecoration: 'none'
-            }}
-            className="footer-contact-card"
-          >
-            <div style={{ color: '#25D366' }}>
-              <IconWhatsapp size={24} />
+          <div>
+            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--color-pink)', marginBottom: '4px' }}>
+              WhatsApp
             </div>
-            <div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#25D366', letterSpacing: '0.04em' }}>
-                WHATSAPP CHAT
-              </div>
-              <div style={{ color: '#FFFFFF', fontSize: '0.92rem', fontWeight: 600 }}>
-                {PODCAST_DATA.brand.phone}
-              </div>
-            </div>
-          </a>
+            <a
+              href={`https://wa.me/${PODCAST_DATA.brand.whatsAppRaw}?text=Hi%20Wandia%2C%20I%20would%20like%20to%20connect...`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: 600 }}
+            >
+              {PODCAST_DATA.brand.phone}
+            </a>
+          </div>
 
-          {/* YouTube Block */}
-          <a
-            href={PODCAST_DATA.brand.youtubeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              padding: '20px',
-              borderRadius: 'var(--radius-sm)',
-              backgroundColor: '#161619',
-              border: '1px solid #28282E',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '16px',
-              textDecoration: 'none'
-            }}
-            className="footer-contact-card"
-          >
-            <div style={{ color: '#FF0000' }}>
-              <IconYoutube size={24} />
+          <div>
+            <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--color-pink)', marginBottom: '4px' }}>
+              YouTube
             </div>
-            <div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#FF5555', letterSpacing: '0.04em' }}>
-                YOUTUBE CHANNEL
-              </div>
-              <div style={{ color: '#FFFFFF', fontSize: '0.92rem', fontWeight: 600 }}>
-                {PODCAST_DATA.brand.youtubeHandle}
-              </div>
-            </div>
-          </a>
+            <a
+              href={PODCAST_DATA.brand.youtubeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#FFFFFF', fontSize: '1.05rem', fontWeight: 600 }}
+            >
+              {PODCAST_DATA.brand.youtubeHandle}
+            </a>
+          </div>
         </div>
 
         {/* Bottom Bar: Logo, Tagline & Copyright */}
         <div
           style={{
-            paddingTop: '36px',
+            paddingTop: '32px',
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
@@ -192,24 +141,23 @@ export default function Footer() {
               src={PODCAST_DATA.brand.logoUrl}
               alt="Unfiltered with Wandia logo"
               style={{
-                width: '42px',
-                height: '42px',
-                borderRadius: '50%',
-                border: '1.5px solid var(--color-pink)'
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%'
               }}
             />
             <div>
-              <div style={{ fontWeight: 800, color: '#FFFFFF', fontSize: '0.98rem' }}>
-                UNFILTERED WITH WANDIA
+              <div style={{ fontWeight: 700, color: '#FFFFFF', fontSize: '15px' }}>
+                Unfiltered with Wandia
               </div>
-              <div style={{ fontSize: '0.8rem', color: '#888890' }}>
+              <div style={{ fontSize: '14px', color: '#888890' }}>
                 Stories that inspire growth · Nairobi, Kenya
               </div>
             </div>
           </div>
 
-          <div style={{ fontSize: '0.82rem', color: '#777780' }}>
-            © {new Date().getFullYear()} Unfiltered with Wandia. All rights reserved.
+          <div style={{ fontSize: '14px', color: '#777780' }}>
+            © {new Date().getFullYear()} Unfiltered with Wandia.
           </div>
         </div>
 
@@ -224,16 +172,8 @@ export default function Footer() {
         title="Chat with Wandia on WhatsApp"
         aria-label="Chat on WhatsApp"
       >
-        <IconWhatsapp size={30} />
+        <IconWhatsapp size={28} />
       </a>
-
-      <style>{`
-        .footer-contact-card:hover {
-          background-color: #202026 !important;
-          border-color: rgba(255, 255, 255, 0.25) !important;
-          transform: translateY(-2px);
-        }
-      `}</style>
     </footer>
   );
 }

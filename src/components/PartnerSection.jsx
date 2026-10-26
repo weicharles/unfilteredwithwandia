@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PODCAST_DATA } from '../data/podcastData';
-import { IconCheck, IconWhatsapp, IconDownload, IconArrowRight, IconUsers, IconEye, IconSparkles } from './Icons';
+import { IconCheck, IconWhatsapp, IconDownload, IconArrowRight } from './Icons';
 
 export default function PartnerSection({ onShowToast }) {
   const [selectedPackage, setSelectedPackage] = useState('Episode Partner (KSh 10,000)');
@@ -48,67 +48,55 @@ export default function PartnerSection({ onShowToast }) {
   };
 
   return (
-    <section id="partner" className="section" style={{ backgroundColor: 'var(--color-cream)' }}>
+    <section id="partner" className="section" style={{ backgroundColor: 'var(--color-page)' }}>
       <div className="container">
         
-        {/* Section Heading */}
-        <div style={{ textAlign: 'center', maxWidth: '780px', margin: '0 auto 54px' }}>
-          <span style={{ fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--color-grey-muted)' }}>
-            BRAND COLLABORATIONS & SPONSORSHIPS
-          </span>
-          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.7rem)', marginTop: '8px', marginBottom: '16px', lineHeight: 1.2 }}>
-            Put your brand inside conversations people choose to sit through.
+        {/* Section Heading without Eyebrow, strictly max 2 lines */}
+        <div style={{ maxWidth: '820px', marginBottom: '52px' }}>
+          <h2 style={{ fontSize: 'var(--type-heading)', marginBottom: '16px', lineHeight: 1.15 }}>
+            Sponsor real conversations.
           </h2>
-          <p style={{ fontSize: '1.1rem', color: '#44444A', lineHeight: 1.6 }}>
+          <p className="text-lead" style={{ color: 'var(--color-grey-muted)', maxWidth: '62ch' }}>
             Unlike 5-second skippable ads, our audience spends 40 to 70 minutes engaged in genuine Kenyan stories. Your product becomes a natural recommendation, not an interruption.
           </p>
         </div>
 
-        {/* 3 Core Value Cards */}
+        {/* 3 Core Value Columns (Editorial layout, NO icon-topped card rows) */}
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '24px',
-            marginBottom: '64px'
+            gap: '32px',
+            marginBottom: '68px'
           }}
         >
-          <div className="card" style={{ padding: '28px' }}>
-            <div style={{ width: '44px', height: '44px', borderRadius: '50%', backgroundColor: 'var(--color-pink-soft)', color: '#8C2250', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>
-              <IconUsers size={22} />
-            </div>
-            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>Attentive Long-Form Audience</h3>
-            <p style={{ fontSize: '0.92rem', color: '#55555C', margin: 0 }}>
-              Our viewers actively listen to uncut conversations. Sponsoring an episode guarantees high recall and genuine emotional affinity with your brand.
+          <div>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>Attentive Long-Form Audience</h3>
+            <p style={{ fontSize: 'var(--type-body)', color: '#4E4E56' }}>
+              Viewers actively listen to uncut conversations. Sponsoring an episode guarantees high recall and genuine emotional affinity with your brand.
             </p>
           </div>
 
-          <div className="card" style={{ padding: '28px' }}>
-            <div style={{ width: '44px', height: '44px', borderRadius: '50%', backgroundColor: 'var(--color-pink-soft)', color: '#8C2250', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>
-              <IconEye size={22} />
-            </div>
-            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>Kenya-Led & Mobile-First</h3>
-            <p style={{ fontSize: '0.92rem', color: '#55555C', margin: 0 }}>
+          <div>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>Kenya-Led & Mobile-First</h3>
+            <p style={{ fontSize: 'var(--type-body)', color: '#4E4E56' }}>
               With 53% of views directly from Kenya and 67% watching on mobile phones, your placement reaches tech-savvy Kenyan consumers wherever they go.
             </p>
           </div>
 
-          <div className="card" style={{ padding: '28px' }}>
-            <div style={{ width: '44px', height: '44px', borderRadius: '50%', backgroundColor: 'var(--color-pink-soft)', color: '#8C2250', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>
-              <IconSparkles size={22} />
-            </div>
-            <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>Authentic Host Integration</h3>
-            <p style={{ fontSize: '0.92rem', color: '#55555C', margin: 0 }}>
+          <div>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '8px' }}>Authentic Host Integration</h3>
+            <p style={{ fontSize: 'var(--type-body)', color: '#4E4E56' }}>
               Wandia weaves your business, product or story into the episode naturally, delivering credible peer-to-peer endorsements that convert.
             </p>
           </div>
         </div>
 
-        {/* 4 Pricing Package Cards */}
+        {/* 4 Pricing Package Cards (Flat surfaces, NO static shadows, NO 1px outlines) */}
         <div style={{ marginBottom: '56px' }}>
-          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+          <div style={{ marginBottom: '32px' }}>
             <h3 style={{ fontSize: '1.8rem', marginBottom: '8px' }}>Sponsorship Packages</h3>
-            <p style={{ color: 'var(--color-grey-muted)', fontSize: '0.95rem' }}>
+            <p style={{ color: 'var(--color-grey-muted)', fontSize: 'var(--type-body)' }}>
               Transparent pricing tailored to growing Kenyan businesses, startups, and established enterprises.
             </p>
           </div>
@@ -117,66 +105,46 @@ export default function PartnerSection({ onShowToast }) {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-              gap: '24px',
+              gap: '20px',
               alignItems: 'stretch'
             }}
           >
-            {PODCAST_DATA.packages.map((pkg) => (
+            {PODCAST_DATA.packages.map((pkg, idx) => (
               <div
                 key={pkg.id}
-                className={pkg.featured ? 'card-dark' : 'card'}
+                className={`${pkg.featured ? 'surface-dark' : 'surface-white'} motion-reveal motion-delay-${(idx % 4) + 1}`}
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  padding: '32px 26px',
-                  border: pkg.featured ? '2px solid var(--color-pink)' : '1px solid var(--color-border)',
-                  boxShadow: pkg.featured ? '0 16px 40px rgba(12, 12, 13, 0.25)' : 'var(--shadow-subtle)',
-                  transform: pkg.featured ? 'scale(1.02)' : 'none'
+                  padding: '36px 28px'
                 }}
               >
                 <div>
-                  {/* Tier Header */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
-                    <span
-                      style={{
-                        fontSize: '0.75rem',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.04em',
-                        backgroundColor: pkg.featured ? 'var(--color-pink)' : 'var(--color-cream)',
-                        color: 'var(--color-black)',
-                        padding: '4px 12px',
-                        borderRadius: 'var(--radius-pill)'
-                      }}
-                    >
-                      {pkg.badge}
-                    </span>
-                    <span style={{ fontSize: '0.8rem', color: pkg.featured ? '#A0A0A8' : 'var(--color-grey-muted)', fontWeight: 600 }}>
-                      {pkg.tierTag}
-                    </span>
-                  </div>
-
-                  <h4 style={{ fontSize: '1.4rem', color: pkg.featured ? '#FFFFFF' : 'var(--color-black)', marginBottom: '8px' }}>
+                  <h3 style={{ fontSize: '1.4rem', color: pkg.featured ? '#FFFFFF' : 'var(--color-black)', marginBottom: '4px' }}>
                     {pkg.name}
-                  </h4>
+                  </h3>
 
-                  <div style={{ fontSize: '2.1rem', fontWeight: 800, color: pkg.featured ? 'var(--color-pink)' : 'var(--color-black)', marginBottom: '14px' }}>
+                  <div style={{ fontSize: '2.1rem', fontWeight: 800, color: pkg.featured ? 'var(--color-pink)' : 'var(--color-black)', marginBottom: '4px' }}>
                     {pkg.price}
                   </div>
 
-                  <p style={{ fontSize: '0.88rem', color: pkg.featured ? '#D0D0D5' : '#55555C', marginBottom: '24px', lineHeight: 1.5 }}>
+                  <div style={{ fontSize: '14px', color: pkg.featured ? 'var(--color-pink)' : 'var(--color-grey-muted)', fontWeight: 600, marginBottom: '16px' }}>
+                    {pkg.badge} · {pkg.tierTag}
+                  </div>
+
+                  <p style={{ fontSize: '15px', color: pkg.featured ? '#D0D0D5' : '#3A3A42', marginBottom: '24px', lineHeight: 1.5 }}>
                     {pkg.description}
                   </p>
 
-                  {/* Features List */}
+                  {/* Features List with Typographic Bullets (No SVG icon card pattern) */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '28px' }}>
-                    {pkg.features.map((feat, idx) => (
-                      <div key={idx} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
-                        <span style={{ color: 'var(--color-pink)', flexShrink: 0, marginTop: '2px' }}>
-                          <IconCheck size={16} />
+                    {pkg.features.map((feat, fIdx) => (
+                      <div key={fIdx} style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
+                        <span style={{ color: pkg.featured ? 'var(--color-pink)' : 'var(--color-black)', fontWeight: 700, flexShrink: 0 }}>
+                          —
                         </span>
-                        <span style={{ fontSize: '0.88rem', color: pkg.featured ? '#E8E8EE' : '#333338', lineHeight: 1.45 }}>
+                        <span style={{ fontSize: '15px', color: pkg.featured ? '#E8E8EE' : '#222228', lineHeight: 1.45 }}>
                           {feat}
                         </span>
                       </div>
@@ -189,8 +157,8 @@ export default function PartnerSection({ onShowToast }) {
                   className={pkg.featured ? 'btn-primary' : 'btn-secondary'}
                   style={{
                     width: '100%',
-                    padding: '12px 20px',
-                    fontSize: '0.92rem',
+                    padding: '13px 20px',
+                    fontSize: '15px',
                     borderRadius: 'var(--radius-pill)'
                   }}
                 >
@@ -200,27 +168,23 @@ export default function PartnerSection({ onShowToast }) {
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <span style={{ fontSize: '0.92rem', color: 'var(--color-grey-muted)', fontStyle: 'italic' }}>
+          <div style={{ marginTop: '24px' }}>
+            <span style={{ fontSize: '15px', color: 'var(--color-grey-muted)' }}>
               Need something custom? We tailor multi-episode partnerships, product placements, and brand series to your budget.
             </span>
           </div>
         </div>
 
-        {/* Case Study Testimonial: BusinessPlus */}
+        {/* Case Study Testimonial: BusinessPlus (Flat Surface) */}
         <div
-          className="card"
+          className="surface-white"
           style={{
-            padding: '36px',
-            backgroundColor: 'var(--color-white)',
-            border: '2px solid var(--color-black)',
-            boxShadow: 'var(--shadow-offset)',
+            padding: '40px',
             marginBottom: '64px'
           }}
         >
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '28px', alignItems: 'center' }} className="testimonial-grid">
             
-            {/* Logo & Verification */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '18px' }}>
               <img
                 src={PODCAST_DATA.brand.businessPlusLogoUrl}
@@ -229,74 +193,78 @@ export default function PartnerSection({ onShowToast }) {
                   width: '74px',
                   height: '74px',
                   borderRadius: '14px',
-                  objectFit: 'contain',
-                  border: '1px solid rgba(12,12,13,0.1)'
+                  objectFit: 'contain'
                 }}
               />
               <div>
-                <span className="pill pill-pink" style={{ fontSize: '0.75rem', padding: '3px 10px', marginBottom: '4px' }}>
-                  PROVEN RESULTS
+                <span
+                  style={{
+                    fontSize: '13px',
+                    fontWeight: 600,
+                    backgroundColor: '#FFFFFF',
+                    border: '1px solid var(--color-border)',
+                    padding: '3px 10px',
+                    borderRadius: 'var(--radius-pill)',
+                    display: 'inline-block',
+                    marginBottom: '4px'
+                  }}
+                >
+                  Proven results
                 </span>
                 <h4 style={{ fontSize: '1.25rem', marginBottom: '2px' }}>BusinessPlus Kenya</h4>
                 <a
                   href={`https://${PODCAST_DATA.testimonial.website}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontSize: '0.85rem', color: 'var(--color-grey-muted)', textDecoration: 'underline' }}
+                  style={{ fontSize: '14px', color: 'var(--color-grey-muted)', textDecoration: 'underline' }}
                 >
                   {PODCAST_DATA.testimonial.website}
                 </a>
               </div>
             </div>
 
-            {/* Testimonial Quote */}
             <div>
-              <blockquote style={{ fontSize: '1.15rem', fontStyle: 'italic', color: '#1A1A1E', lineHeight: 1.6, marginBottom: '12px' }}>
+              <blockquote style={{ fontSize: '1.2rem', fontStyle: 'italic', color: '#1A1A1E', lineHeight: 1.6, marginBottom: '12px' }}>
                 "{PODCAST_DATA.testimonial.quote}"
               </blockquote>
-              <cite style={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--color-black)', fontStyle: 'normal' }}>
-                — {PODCAST_DATA.testimonial.author}, BusinessPlus · Software Advertisement Collaboration
-              </cite>
+              <div style={{ fontSize: '15px', fontWeight: 700, color: 'var(--color-black)' }}>
+                Founder, BusinessPlus · Software Advertisement Collaboration
+              </div>
             </div>
 
           </div>
         </div>
 
         {/* Interactive Inquiry Form & Media Kit Download Box */}
-        <div id="partner-form-card" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '36px' }} className="partner-form-layout">
+        <div id="partner-form-card" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '32px' }} className="partner-form-layout">
           
-          {/* Left Column: Download Media Kit Pitch */}
+          {/* Left Column: Download Media Kit */}
           <div
+            className="surface-dark"
             style={{
-              backgroundColor: 'var(--color-black)',
-              color: '#FFFFFF',
-              borderRadius: 'var(--radius-lg)',
-              padding: '40px 32px',
+              padding: '44px 36px',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between'
             }}
           >
             <div>
-              <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-pink)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                OFFICIAL DOCUMENTATION
-              </span>
-              <h3 style={{ color: '#FFFFFF', fontSize: '1.75rem', marginTop: '8px', marginBottom: '14px' }}>
+              <h3 style={{ color: '#FFFFFF', fontSize: '1.8rem', marginBottom: '16px' }}>
                 Download Our 2026 Media Kit
               </h3>
-              <p style={{ color: '#C0C0C8', fontSize: '0.98rem', lineHeight: 1.6, marginBottom: '24px' }}>
-                Get our complete official breakdown of audience demographics, watch-time graphs, case studies, and full sponsorship terms in a crisp, shareable PDF.
+              <p style={{ color: '#C0C0C8', fontSize: 'var(--type-body)', lineHeight: 1.6, marginBottom: '28px' }}>
+                Get our complete official breakdown of audience demographics, watch-time graphs, case studies, and full sponsorship terms in a crisp PDF.
               </p>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '32px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#E0E0E8', fontSize: '0.9rem' }}>
-                  <IconCheck size={16} className="text-pink" /> 100% Verified YouTube Studio metrics
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '36px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#E0E0E8', fontSize: '15px' }}>
+                  <IconCheck size={16} /> 100% Verified YouTube Studio metrics
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#E0E0E8', fontSize: '0.9rem' }}>
-                  <IconCheck size={16} className="text-pink" /> Clear pricing tiers & delivery milestones
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#E0E0E8', fontSize: '15px' }}>
+                  <IconCheck size={16} /> Clear pricing tiers & delivery milestones
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#E0E0E8', fontSize: '0.9rem' }}>
-                  <IconCheck size={16} className="text-pink" /> Direct WhatsApp coordination with host
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#E0E0E8', fontSize: '15px' }}>
+                  <IconCheck size={16} /> Direct WhatsApp coordination with host
                 </div>
               </div>
             </div>
@@ -305,25 +273,25 @@ export default function PartnerSection({ onShowToast }) {
               href={PODCAST_DATA.brand.mediaKitUrl}
               download="Unfiltered_with_Wandia_Media_Kit.pdf"
               className="btn-primary"
-              style={{ padding: '16px 28px', fontSize: '1rem', width: 'fit-content' }}
+              style={{ width: 'fit-content' }}
             >
               <IconDownload size={20} /> Download Media Kit (PDF)
             </a>
           </div>
 
           {/* Right Column: Interactive Sponsor Inquiry Form */}
-          <div className="card" style={{ padding: '36px' }}>
+          <div className="surface-white" style={{ padding: '40px 36px' }}>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '6px' }}>
-              Send a Partnership Inquiry
+              Send a partnership inquiry.
             </h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--color-grey-muted)', marginBottom: '24px' }}>
+            <p style={{ fontSize: '15px', color: 'var(--color-grey-muted)', marginBottom: '24px' }}>
               Fill out this quick form to immediately generate a tailored WhatsApp message or email inquiry.
             </p>
 
             <form onSubmit={handleWhatsAppSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-row-2">
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '6px' }}>
+                  <label style={{ display: 'block', fontSize: '14px', fontWeight: 600, marginBottom: '6px' }}>
                     Business / Brand Name *
                   </label>
                   <input
@@ -335,19 +303,20 @@ export default function PartnerSection({ onShowToast }) {
                     placeholder="e.g. BusinessPlus or Nairobi Cafe"
                     style={{
                       width: '100%',
-                      padding: '12px 14px',
+                      padding: '13px 14px',
                       borderRadius: 'var(--radius-sm)',
-                      border: '1.5px solid var(--color-border)',
-                      fontSize: '0.95rem',
+                      border: '1px solid var(--color-border)',
+                      fontSize: '15px',
                       fontFamily: 'inherit',
                       outline: 'none',
-                      backgroundColor: 'var(--color-cream)'
+                      backgroundColor: '#FFFFFF',
+                      color: 'var(--color-black)'
                     }}
                   />
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '6px' }}>
+                  <label style={{ display: 'block', fontSize: '14px', fontWeight: 600, marginBottom: '6px' }}>
                     Contact Person *
                   </label>
                   <input
@@ -359,13 +328,14 @@ export default function PartnerSection({ onShowToast }) {
                     placeholder="Your name"
                     style={{
                       width: '100%',
-                      padding: '12px 14px',
+                      padding: '13px 14px',
                       borderRadius: 'var(--radius-sm)',
-                      border: '1.5px solid var(--color-border)',
-                      fontSize: '0.95rem',
+                      border: '1px solid var(--color-border)',
+                      fontSize: '15px',
                       fontFamily: 'inherit',
                       outline: 'none',
-                      backgroundColor: 'var(--color-cream)'
+                      backgroundColor: '#FFFFFF',
+                      color: 'var(--color-black)'
                     }}
                   />
                 </div>
@@ -373,7 +343,7 @@ export default function PartnerSection({ onShowToast }) {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="form-row-2">
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '6px' }}>
+                  <label style={{ display: 'block', fontSize: '14px', fontWeight: 600, marginBottom: '6px' }}>
                     Phone / WhatsApp *
                   </label>
                   <input
@@ -385,19 +355,20 @@ export default function PartnerSection({ onShowToast }) {
                     placeholder="+254 7..."
                     style={{
                       width: '100%',
-                      padding: '12px 14px',
+                      padding: '13px 14px',
                       borderRadius: 'var(--radius-sm)',
-                      border: '1.5px solid var(--color-border)',
-                      fontSize: '0.95rem',
+                      border: '1px solid var(--color-border)',
+                      fontSize: '15px',
                       fontFamily: 'inherit',
                       outline: 'none',
-                      backgroundColor: 'var(--color-cream)'
+                      backgroundColor: '#FFFFFF',
+                      color: 'var(--color-black)'
                     }}
                   />
                 </div>
 
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '6px' }}>
+                  <label style={{ display: 'block', fontSize: '14px', fontWeight: 600, marginBottom: '6px' }}>
                     Email Address
                   </label>
                   <input
@@ -408,20 +379,21 @@ export default function PartnerSection({ onShowToast }) {
                     placeholder="name@business.com"
                     style={{
                       width: '100%',
-                      padding: '12px 14px',
+                      padding: '13px 14px',
                       borderRadius: 'var(--radius-sm)',
-                      border: '1.5px solid var(--color-border)',
-                      fontSize: '0.95rem',
+                      border: '1px solid var(--color-border)',
+                      fontSize: '15px',
                       fontFamily: 'inherit',
                       outline: 'none',
-                      backgroundColor: 'var(--color-cream)'
+                      backgroundColor: '#FFFFFF',
+                      color: 'var(--color-black)'
                     }}
                   />
                 </div>
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '6px' }}>
+                <label style={{ display: 'block', fontSize: '14px', fontWeight: 600, marginBottom: '6px' }}>
                   Package of Interest
                 </label>
                 <select
@@ -430,13 +402,14 @@ export default function PartnerSection({ onShowToast }) {
                   onChange={handleChange}
                   style={{
                     width: '100%',
-                    padding: '12px 14px',
+                    padding: '13px 14px',
                     borderRadius: 'var(--radius-sm)',
-                    border: '1.5px solid var(--color-border)',
-                    fontSize: '0.95rem',
+                    border: '1px solid var(--color-border)',
+                    fontSize: '15px',
                     fontFamily: 'inherit',
                     outline: 'none',
-                    backgroundColor: 'var(--color-cream)'
+                    backgroundColor: '#FFFFFF',
+                    color: 'var(--color-black)'
                   }}
                 >
                   <option value="Basic (KSh 1,500)">Basic — KSh 1,500 (Mention & Description)</option>
@@ -448,7 +421,7 @@ export default function PartnerSection({ onShowToast }) {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '6px' }}>
+                <label style={{ display: 'block', fontSize: '14px', fontWeight: 600, marginBottom: '6px' }}>
                   Brief Notes / Product Details
                 </label>
                 <textarea
@@ -459,13 +432,14 @@ export default function PartnerSection({ onShowToast }) {
                   placeholder="Tell us a little bit about what product or service you'd like to feature..."
                   style={{
                     width: '100%',
-                    padding: '12px 14px',
+                    padding: '13px 14px',
                     borderRadius: 'var(--radius-sm)',
-                    border: '1.5px solid var(--color-border)',
-                    fontSize: '0.95rem',
+                    border: '1px solid var(--color-border)',
+                    fontSize: '15px',
                     fontFamily: 'inherit',
                     outline: 'none',
-                    backgroundColor: 'var(--color-cream)',
+                    backgroundColor: '#FFFFFF',
+                    color: 'var(--color-black)',
                     resize: 'vertical'
                   }}
                 />

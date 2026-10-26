@@ -1,129 +1,103 @@
 import React from 'react';
 import { PODCAST_DATA } from '../data/podcastData';
-import { IconUsers, IconClock, IconEye, IconVideo } from './Icons';
 
 export default function StatsStrip() {
-  const getIcon = (name) => {
-    switch (name) {
-      case 'Users': return <IconUsers size={24} />;
-      case 'Clock': return <IconClock size={24} />;
-      case 'Eye': return <IconEye size={24} />;
-      case 'Video': return <IconVideo size={24} />;
-      default: return null;
-    }
-  };
-
   return (
     <section style={{ paddingBottom: '70px', position: 'relative' }}>
       <div className="container">
-        {/* Section Heading Label */}
-        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-          <span style={{ fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--color-grey-muted)' }}>
-            THE NUMBERS · VERIFIED YOUTUBE TRACTION
-          </span>
-          <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.1rem)', marginTop: '6px' }}>
-            A Growing, Attentive Audience
+        
+        {/* Clean Heading without Eyebrow */}
+        <div style={{ marginBottom: '32px' }}>
+          <h2 style={{ fontSize: 'var(--type-heading)', marginBottom: '8px' }}>
+            A growing, attentive audience.
           </h2>
+          <p style={{ color: 'var(--color-grey-muted)', fontSize: 'var(--type-body)' }}>
+            Built organically in Nairobi on genuine long-form watch time.
+          </p>
         </div>
 
-        {/* 4 Cards Grid */}
+        {/* 4 Stats Blocks (Flat White Surfaces, Zero Box-Shadow, Zero Icon-Tops) */}
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: '20px',
-            marginBottom: '32px'
+            gap: '18px',
+            marginBottom: '28px'
           }}
         >
-          {PODCAST_DATA.stats.map((stat) => (
+          {PODCAST_DATA.stats.map((stat, idx) => (
             <div
               key={stat.label}
-              className="card"
+              className={`surface-white motion-reveal motion-delay-${(idx % 4) + 1}`}
               style={{
-                position: 'relative',
-                overflow: 'hidden',
                 padding: '28px 24px',
-                textAlign: 'left',
-                borderTop: '4px solid var(--color-pink)'
+                textAlign: 'left'
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
-                <span style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--color-grey-muted)' }}>
-                  {stat.label}
-                </span>
-                <span style={{ color: 'var(--color-black)' }}>
-                  {getIcon(stat.icon)}
-                </span>
-              </div>
-              <div style={{ fontSize: 'clamp(2.1rem, 4vw, 2.8rem)', fontWeight: 800, color: 'var(--color-black)', lineHeight: 1.1, marginBottom: '6px' }}>
+              <div style={{ fontSize: 'clamp(2.4rem, 4.2vw, 3.2rem)', fontWeight: 800, color: 'var(--color-black)', lineHeight: 1.05, marginBottom: '8px' }}>
                 {stat.value}
               </div>
-              <div style={{ fontSize: '0.82rem', color: '#55555C', fontWeight: 500 }}>
+              <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--color-black)', marginBottom: '4px' }}>
+                {stat.label}
+              </h3>
+              <div style={{ fontSize: '14px', color: '#3A3A42', fontWeight: 500 }}>
                 {stat.detail}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Audience Context Banner */}
+        {/* Organic Discovery Narrative Banner */}
         <div
+          className="surface-white"
           style={{
-            backgroundColor: 'var(--color-white)',
-            borderRadius: 'var(--radius-md)',
-            border: '1px solid var(--color-border)',
-            padding: '24px 30px',
+            padding: '28px 32px',
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: '20px'
+            gap: '24px'
           }}
         >
           <div style={{ maxWidth: '680px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#25D366' }} />
-              <span style={{ fontWeight: 700, fontSize: '0.95rem', color: 'var(--color-black)' }}>
-                Organic Audience Discovery
-              </span>
-            </div>
-            <p style={{ fontSize: '0.95rem', color: '#44444A', margin: 0 }}>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '6px', color: 'var(--color-black)' }}>
+              Organic Audience Discovery
+            </h3>
+            <p style={{ fontSize: 'var(--type-body)', color: '#3A3A40', margin: 0 }}>
               {PODCAST_DATA.audienceBreakdown.note}
             </p>
           </div>
 
-          {/* Quick Metrics Badges */}
           <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
             <div
               style={{
-                padding: '10px 16px',
-                backgroundColor: 'var(--color-cream)',
+                padding: '14px 22px',
+                backgroundColor: '#FFFFFF',
                 borderRadius: 'var(--radius-sm)',
-                textAlign: 'center',
-                border: '1px solid var(--color-border)'
+                textAlign: 'center'
               }}
             >
-              <div style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--color-black)' }}>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--color-black)' }}>
                 {PODCAST_DATA.audienceBreakdown.mobileShare}
               </div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-grey-muted)' }}>
-                Mobile Watch Time
+              <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--color-grey-muted)' }}>
+                Mobile phone watch time
               </div>
             </div>
 
             <div
               style={{
-                padding: '10px 16px',
-                backgroundColor: 'var(--color-cream)',
+                padding: '14px 22px',
+                backgroundColor: '#FFFFFF',
                 borderRadius: 'var(--radius-sm)',
-                textAlign: 'center',
-                border: '1px solid var(--color-border)'
+                textAlign: 'center'
               }}
             >
-              <div style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--color-black)' }}>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--color-black)' }}>
                 {PODCAST_DATA.audienceBreakdown.kenyaShare}
               </div>
-              <div style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--color-grey-muted)' }}>
-                Kenya-Based Views
+              <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--color-grey-muted)' }}>
+                Views from Kenya
               </div>
             </div>
           </div>

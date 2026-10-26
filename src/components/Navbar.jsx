@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { PODCAST_DATA } from '../data/podcastData';
-import { IconWhatsapp } from './Icons';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -44,10 +43,9 @@ export default function Navbar() {
         position: 'sticky',
         top: 0,
         zIndex: 90,
-        backgroundColor: scrolled ? 'rgba(246, 242, 238, 0.96)' : 'var(--color-cream)',
-        backdropFilter: scrolled ? 'blur(10px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(12, 12, 13, 0.08)' : '1px solid transparent',
-        transition: 'all 0.25s ease',
+        backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.96)' : 'var(--color-page)',
+        borderBottom: scrolled ? '1px solid var(--color-border)' : 'none',
+        transition: 'all 0.2s ease',
         height: 'var(--nav-height)',
         display: 'flex',
         alignItems: 'center'
@@ -65,39 +63,35 @@ export default function Navbar() {
         >
           <img
             src={PODCAST_DATA.brand.logoUrl}
-            alt="Unfiltered with Wandia"
+            alt="Unfiltered with Wandia logo"
             style={{
               width: '46px',
               height: '46px',
               borderRadius: '50%',
-              objectFit: 'cover',
-              boxShadow: '0 2px 8px rgba(12, 12, 13, 0.12)',
-              border: '1.5px solid #0C0C0D'
+              objectFit: 'cover'
             }}
           />
           <div>
-            <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--color-black)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
-              UNFILTERED
+            <div style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--color-black)', letterSpacing: '-0.02em', lineHeight: 1.15 }}>
+              Unfiltered
             </div>
-            <div style={{ fontSize: '0.75rem', fontWeight: 500, color: 'var(--color-grey-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              With Wandia
+            <div style={{ fontSize: '14px', fontWeight: 500, color: 'var(--color-grey-muted)' }}>
+              with Wandia
             </div>
           </div>
         </a>
 
         {/* Desktop Links */}
-        <nav style={{ display: 'none', alignItems: 'center', gap: '30px' }} className="desktop-nav">
+        <nav style={{ display: 'none', alignItems: 'center', gap: '32px' }} className="desktop-nav">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={(e) => handleLinkClick(e, link.href)}
               style={{
-                fontSize: '0.92rem',
+                fontSize: '15px',
                 fontWeight: 600,
-                color: 'var(--color-black)',
-                position: 'relative',
-                padding: '6px 0'
+                color: 'var(--color-black)'
               }}
               className="nav-link"
             >
@@ -115,7 +109,7 @@ export default function Navbar() {
             style={{
               padding: '10px 22px',
               minHeight: '44px',
-              fontSize: '0.9rem',
+              fontSize: '15px',
               display: 'none'
             }}
           >
@@ -134,10 +128,8 @@ export default function Navbar() {
               width: '42px',
               height: '42px',
               borderRadius: 'var(--radius-sm)',
-              border: '1px solid var(--color-border)',
-              backgroundColor: 'var(--color-white)',
-              gap: '5px',
-              cursor: 'pointer'
+              backgroundColor: 'var(--color-surface)',
+              gap: '5px'
             }}
             className="mobile-toggle"
           >
@@ -180,9 +172,8 @@ export default function Navbar() {
             top: 'var(--nav-height)',
             left: 0,
             right: 0,
-            backgroundColor: 'var(--color-cream)',
-            borderBottom: '2px solid var(--color-black)',
-            boxShadow: '0 12px 30px rgba(12, 12, 13, 0.1)',
+            backgroundColor: 'var(--color-page)',
+            borderBottom: '1px solid var(--color-border)',
             padding: '24px 20px 32px',
             display: 'flex',
             flexDirection: 'column',
@@ -198,8 +189,7 @@ export default function Navbar() {
                 fontSize: '1.1rem',
                 fontWeight: 600,
                 color: 'var(--color-black)',
-                padding: '10px 0',
-                borderBottom: '1px solid rgba(12, 12, 13, 0.05)'
+                padding: '10px 0'
               }}
             >
               {link.label}
@@ -237,9 +227,6 @@ export default function Navbar() {
           .mobile-toggle {
             display: none !important;
           }
-        }
-        .nav-link:hover {
-          color: #8C2250 !important;
         }
       `}</style>
     </header>

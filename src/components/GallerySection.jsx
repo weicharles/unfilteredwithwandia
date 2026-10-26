@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PODCAST_DATA } from '../data/podcastData';
-import { IconEye, IconClose, IconMicrophone } from './Icons';
+import { IconClose } from './Icons';
 
 export default function GallerySection() {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
@@ -10,7 +10,7 @@ export default function GallerySection() {
       id: 1,
       title: "The Conversation Chair",
       caption: "Intimate, relaxed studio setup designed for guests to feel safe and open.",
-      tag: "Studio Setup",
+      tag: "Studio setup",
       aspect: "tall",
       img: PODCAST_DATA.brand.portraitUrl
     },
@@ -26,7 +26,7 @@ export default function GallerySection() {
       id: 3,
       title: "Host in Focus: Wandia",
       caption: "Creator and host Wandia leading thoughtful, vulnerable questions.",
-      tag: "Host",
+      tag: "The host",
       aspect: "square",
       img: PODCAST_DATA.brand.portraitUrl
     },
@@ -34,7 +34,7 @@ export default function GallerySection() {
       id: 4,
       title: "Pre-Interview Boundary Alignment",
       caption: "Every guest establishes what is comfortable before any recording camera starts.",
-      tag: "Guest Care",
+      tag: "Guest care",
       aspect: "wide",
       img: PODCAST_DATA.brand.portraitUrl
     },
@@ -42,7 +42,7 @@ export default function GallerySection() {
       id: 5,
       title: "Real Reactions, Zero Filters",
       caption: "Unrehearsed laughter and tears that make Unfiltered deeply human.",
-      tag: "Moments",
+      tag: "Authentic moments",
       aspect: "tall",
       img: PODCAST_DATA.brand.portraitUrl
     },
@@ -50,39 +50,36 @@ export default function GallerySection() {
       id: 6,
       title: "Community & Story Impact",
       caption: "Stories that spark vital conversations in campus dorms and living rooms across Kenya.",
-      tag: "Impact",
+      tag: "Viewer impact",
       aspect: "square",
       img: PODCAST_DATA.brand.portraitUrl
     }
   ];
 
   return (
-    <section id="gallery" className="section" style={{ backgroundColor: '#F0EBE5', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)' }}>
+    <section id="gallery" className="section" style={{ backgroundColor: 'var(--color-surface-subtle)' }}>
       <div className="container">
         
-        {/* Section Heading */}
-        <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}>
-          <span style={{ fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--color-grey-muted)' }}>
-            STUDIO & RECORDINGS
-          </span>
-          <h2 style={{ fontSize: 'clamp(1.9rem, 3.6vw, 2.5rem)', marginTop: '8px', marginBottom: '12px' }}>
-            Behind the Scenes
+        {/* Section Heading without Eyebrow */}
+        <div style={{ textAlign: 'left', maxWidth: '640px', marginBottom: '44px' }}>
+          <h2 style={{ fontSize: 'var(--type-heading)', marginBottom: '10px' }}>
+            Behind the scenes.
           </h2>
-          <p style={{ fontSize: '1.05rem', color: '#44444A' }}>
-            Real conversations, recorded with dignity and professional production in Nairobi.
+          <p style={{ fontSize: 'var(--type-body)', color: 'var(--color-grey-muted)' }}>
+            Real conversations, recorded with care and professional production in Nairobi.
           </p>
         </div>
 
-        {/* Gallery Grid */}
+        {/* Gallery Grid (Flat Image Tiles, No Box-Shadows) */}
         <div
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '24px'
+            gap: '20px'
           }}
         >
-          {galleryItems.map((item) => (
-            <div
+          {galleryItems.map((item, idx) => (
+            <figure
               key={item.id}
               onClick={() => setSelectedPhoto(item)}
               style={{
@@ -91,12 +88,10 @@ export default function GallerySection() {
                 overflow: 'hidden',
                 backgroundColor: 'var(--color-black)',
                 cursor: 'pointer',
-                aspectRatio: item.aspect === 'tall' ? '4 / 5' : item.aspect === 'wide' ? '16 / 11' : '1 / 1',
-                border: '2px solid rgba(12, 12, 13, 0.1)',
-                boxShadow: 'var(--shadow-subtle)',
-                transition: 'all 0.25s ease'
+                margin: 0,
+                aspectRatio: item.aspect === 'tall' ? '4 / 5' : item.aspect === 'wide' ? '16 / 11' : '1 / 1'
               }}
-              className="gallery-card"
+              className={`gallery-card motion-reveal motion-delay-${(idx % 4) + 1}`}
             >
               <img
                 src={item.img}
@@ -105,49 +100,46 @@ export default function GallerySection() {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  filter: 'brightness(0.92)',
-                  transition: 'transform 0.4s ease, filter 0.3s ease'
+                  filter: 'brightness(0.92)'
                 }}
-                className="gallery-img"
               />
 
-              {/* Gradient & Overlay Info */}
-              <div
+              {/* Caption Overlay */}
+              <figcaption
                 style={{
                   position: 'absolute',
                   inset: 0,
-                  background: 'linear-gradient(to top, rgba(12, 12, 13, 0.90) 0%, rgba(12, 12, 13, 0.2) 50%, transparent 100%)',
-                  padding: '20px',
+                  background: 'linear-gradient(to top, rgba(12, 12, 13, 0.92) 0%, rgba(12, 12, 13, 0.25) 55%, transparent 100%)',
+                  padding: '22px',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'flex-end',
                   color: '#FFFFFF'
                 }}
               >
-                <span
-                  style={{
-                    alignSelf: 'flex-start',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.04em',
-                    backgroundColor: 'var(--color-pink)',
-                    color: 'var(--color-black)',
-                    padding: '3px 10px',
-                    borderRadius: 'var(--radius-pill)',
-                    marginBottom: '8px'
-                  }}
-                >
-                  {item.tag}
-                </span>
-                <h4 style={{ color: '#FFFFFF', fontSize: '1.1rem', marginBottom: '4px', lineHeight: 1.3 }}>
+                <h3 style={{ color: '#FFFFFF', fontSize: '1.15rem', marginBottom: '6px', lineHeight: 1.25 }}>
                   {item.title}
-                </h4>
-                <p style={{ color: '#CCCCCC', fontSize: '0.82rem', margin: 0, lineHeight: 1.4 }}>
+                </h3>
+                <p style={{ color: '#E0E0E8', fontSize: '14px', margin: 0, lineHeight: 1.45 }}>
                   {item.caption}
                 </p>
-              </div>
-            </div>
+                <div style={{ marginTop: '8px' }}>
+                  <span
+                    style={{
+                      fontSize: '12px',
+                      fontWeight: 600,
+                      backgroundColor: 'var(--color-pink)',
+                      color: '#0C0C0D',
+                      padding: '2px 10px',
+                      borderRadius: 'var(--radius-pill)',
+                      display: 'inline-block'
+                    }}
+                  >
+                    {item.tag}
+                  </span>
+                </div>
+              </figcaption>
+            </figure>
           ))}
         </div>
 
@@ -177,11 +169,9 @@ export default function GallerySection() {
               width: '100%',
               backgroundColor: 'var(--color-white)',
               borderRadius: 'var(--radius-lg)',
-              overflow: 'hidden',
-              boxShadow: '0 20px 60px rgba(0, 0, 0, 0.4)'
+              overflow: 'hidden'
             }}
           >
-            {/* Close Button */}
             <button
               onClick={() => setSelectedPhoto(null)}
               style={{
@@ -212,30 +202,29 @@ export default function GallerySection() {
             </div>
 
             <div style={{ padding: '24px 28px' }}>
-              <span className="pill pill-pink" style={{ fontSize: '0.8rem', padding: '3px 10px', marginBottom: '8px' }}>
+              <span
+                style={{
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  backgroundColor: 'var(--color-surface)',
+                  padding: '3px 10px',
+                  borderRadius: 'var(--radius-pill)',
+                  display: 'inline-block',
+                  marginBottom: '8px'
+                }}
+              >
                 {selectedPhoto.tag}
               </span>
-              <h3 style={{ fontSize: '1.35rem', marginTop: '6px', marginBottom: '8px' }}>
+              <h3 style={{ fontSize: '1.35rem', marginBottom: '8px' }}>
                 {selectedPhoto.title}
               </h3>
-              <p style={{ color: '#44444A', fontSize: '0.95rem', margin: 0 }}>
+              <p style={{ color: '#44444A', fontSize: 'var(--type-body)', margin: 0 }}>
                 {selectedPhoto.caption}
               </p>
             </div>
           </div>
         </div>
       )}
-
-      <style>{`
-        .gallery-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 12px 30px rgba(12, 12, 13, 0.15) !important;
-        }
-        .gallery-card:hover .gallery-img {
-          transform: scale(1.05);
-          filter: brightness(1);
-        }
-      `}</style>
     </section>
   );
 }
