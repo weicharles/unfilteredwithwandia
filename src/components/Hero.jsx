@@ -40,16 +40,14 @@ export default function Hero() {
               <button
                 onClick={() => scrollTo('#partner')}
                 className="btn-primary"
-                style={{ fontSize: '1.02rem', padding: '16px 34px' }}
               >
                 Partner With Us
-                <IconArrowRight size={18} />
+                <IconArrowRight size={16} />
               </button>
 
               <button
                 onClick={() => scrollTo('#guest')}
                 className="btn-secondary"
-                style={{ fontSize: '1.02rem', padding: '16px 34px' }}
               >
                 Be a Guest
               </button>
@@ -64,7 +62,7 @@ export default function Hero() {
                 <span className="audio-bar" style={{ animationDelay: '0.5s' }} />
               </div>
               <span style={{ fontSize: 'var(--type-small)', color: 'var(--color-grey-muted)', fontWeight: 500 }}>
-                Hosted by Wandia · Recorded in Nairobi · Uncut 40–70 min conversations
+                Hosted by Wandia · Uncut 40–70 min studio conversations
               </span>
             </div>
 
