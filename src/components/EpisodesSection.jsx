@@ -153,7 +153,7 @@ export default function EpisodesSection() {
                     backgroundColor: '#FFFFFF',
                     border: '1px solid var(--color-border)',
                     padding: '4px 12px',
-                    borderRadius: 'var(--radius-pill)',
+                    borderRadius: 'var(--radius-sm)',
                     color: 'var(--color-black)'
                   }}
                 >
@@ -176,18 +176,16 @@ export default function EpisodesSection() {
                 <button
                   onClick={() => setPlayingVideoId(currentFeatured.youtubeId)}
                   className="btn-primary"
-                  style={{ fontSize: '15px', padding: '12px 24px' }}
                 >
-                  <IconPlay size={16} /> Play Episode Now
+                  <IconPlay size={15} /> Play Episode Now
                 </button>
                 <a
                   href={`https://www.youtube.com/watch?v=${currentFeatured.youtubeId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary"
-                  style={{ fontSize: '15px', padding: '12px 24px' }}
                 >
-                  <IconYoutube size={16} /> Open on YouTube
+                  <IconYoutube size={15} /> Open on YouTube
                 </a>
               </div>
             </div>
@@ -207,12 +205,13 @@ export default function EpisodesSection() {
               style={{
                 backgroundColor: activeFilter === cat ? 'var(--color-black)' : 'var(--color-surface)',
                 color: activeFilter === cat ? '#FFFFFF' : 'var(--color-black)',
-                padding: '8px 18px',
-                borderRadius: 'var(--radius-pill)',
-                fontSize: '14px',
+                padding: '7px 16px',
+                borderRadius: 'var(--radius-sm)',
+                fontSize: '13.5px',
                 fontWeight: activeFilter === cat ? 600 : 500,
                 cursor: 'pointer',
                 border: 'none',
+                whiteSpace: 'nowrap',
                 transition: 'background-color 0.2s ease, color 0.2s ease'
               }}
             >
@@ -332,7 +331,7 @@ export default function EpisodesSection() {
                       backgroundColor: '#FFFFFF',
                       border: '1px solid var(--color-border)',
                       padding: '3px 10px',
-                      borderRadius: 'var(--radius-pill)',
+                      borderRadius: 'var(--radius-sm)',
                       color: 'var(--color-black)'
                     }}
                   >
@@ -410,7 +409,6 @@ export default function EpisodesSection() {
             <button
               onClick={() => setShowAllEpisodes(!showAllEpisodes)}
               className="btn-secondary"
-              style={{ padding: '13px 32px' }}
             >
               {showAllEpisodes ? `Show Fewer Episodes` : `View All ${filteredEpisodes.length} Real Episodes`}
             </button>
@@ -419,33 +417,33 @@ export default function EpisodesSection() {
 
         {/* Subscribe Banner */}
         <div
-          className="surface-dark"
+          className="surface-dark subscribe-banner-card"
           style={{
-            padding: '36px 32px',
+            padding: '32px 30px',
             display: 'flex',
             flexWrap: 'wrap',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: '24px'
+            gap: '20px'
           }}
         >
           <div>
-            <h3 style={{ color: '#FFFFFF', fontSize: '1.4rem', marginBottom: '6px' }}>
+            <h3 style={{ color: '#FFFFFF', fontSize: '1.35rem', marginBottom: '6px' }}>
               Never miss a conversation.
             </h3>
-            <p style={{ color: '#A0A0A8', fontSize: 'var(--type-body)', margin: 0 }}>
+            <p style={{ color: '#A0A0A8', fontSize: '15px', margin: 0 }}>
               Join 450+ growing subscribers tuning into honest Kenyan stories every week.
             </p>
           </div>
 
-          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+          <div>
             <a
               href={PODCAST_DATA.brand.youtubeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              <IconYoutube size={20} /> Subscribe on YouTube
+              <IconYoutube size={18} /> Subscribe on YouTube
             </a>
           </div>
         </div>
@@ -456,6 +454,11 @@ export default function EpisodesSection() {
         @media (min-width: 900px) {
           .featured-video-grid {
             grid-template-columns: 1.25fr 0.95fr !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .subscribe-banner-card {
+            padding: 24px 20px !important;
           }
         }
         .thumbnail-hover:hover {
