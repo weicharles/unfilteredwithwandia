@@ -80,9 +80,9 @@ export default function GuestSection({ onShowToast }) {
           </div>
 
           <div style={{ borderLeft: '3px solid var(--color-black)', paddingLeft: '20px' }}>
-            <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Record in Nairobi</h3>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '10px' }}>Schedule the recording</h3>
             <p style={{ fontSize: 'var(--type-body)', color: '#3A3A42', margin: 0 }}>
-              Join us in our Nairobi studio for an unhurried, heartfelt conversation. Guests never pay to share their stories.
+              Join us in our studio for an unhurried, heartfelt conversation. Guests never pay to share their stories.
             </p>
           </div>
         </div>
@@ -130,7 +130,6 @@ export default function GuestSection({ onShowToast }) {
               <button
                 onClick={() => setSubmitted(false)}
                 className="btn-secondary"
-                style={{ fontSize: '15px', padding: '12px 26px' }}
               >
                 Submit another application
               </button>
@@ -201,7 +200,7 @@ export default function GuestSection({ onShowToast }) {
                     required
                     value={guestForm.location}
                     onChange={handleChange}
-                    placeholder="e.g. Nairobi, Nakuru, Eldoret"
+                    placeholder="Your town or county"
                     style={{
                       width: '100%',
                       padding: '13px 14px',
@@ -327,7 +326,7 @@ export default function GuestSection({ onShowToast }) {
                   style={{ width: '18px', height: '18px', marginTop: '3px', cursor: 'pointer' }}
                 />
                 <label htmlFor="guest-consent" style={{ fontSize: '14px', color: '#44444A', cursor: 'pointer', lineHeight: 1.45 }}>
-                  I understand that Unfiltered with Wandia is recorded in Nairobi and published publicly on YouTube. I confirm that I am sharing willingly. *
+                  I understand that Unfiltered with Wandia is recorded in studio and published publicly on YouTube. I confirm that I am sharing willingly. *
                 </label>
               </div>
 
