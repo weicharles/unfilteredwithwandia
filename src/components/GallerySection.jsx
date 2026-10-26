@@ -66,7 +66,7 @@ export default function GallerySection() {
             Behind the scenes.
           </h2>
           <p style={{ fontSize: 'var(--type-body)', color: 'var(--color-grey-muted)' }}>
-            Real conversations, recorded with care and professional production in Nairobi.
+            Real conversations, recorded with care and professional studio production.
           </p>
         </div>
 
@@ -131,7 +131,7 @@ export default function GallerySection() {
                       backgroundColor: 'var(--color-pink)',
                       color: '#0C0C0D',
                       padding: '2px 10px',
-                      borderRadius: 'var(--radius-pill)',
+                      borderRadius: 'var(--radius-sm)',
                       display: 'inline-block'
                     }}
                   >
@@ -208,7 +208,7 @@ export default function GallerySection() {
                   fontWeight: 600,
                   backgroundColor: 'var(--color-surface)',
                   padding: '3px 10px',
-                  borderRadius: 'var(--radius-pill)',
+                  borderRadius: 'var(--radius-sm)',
                   display: 'inline-block',
                   marginBottom: '8px'
                 }}
