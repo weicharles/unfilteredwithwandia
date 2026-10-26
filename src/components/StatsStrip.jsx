@@ -12,7 +12,7 @@ export default function StatsStrip() {
             A growing, attentive audience.
           </h2>
           <p style={{ color: 'var(--color-grey-muted)', fontSize: 'var(--type-body)' }}>
-            Built organically in Nairobi on genuine long-form watch time.
+            Built organically on genuine long-form watch time.
           </p>
         </div>
 
