@@ -155,12 +155,7 @@ export default function PartnerSection({ onShowToast }) {
                 <button
                   onClick={() => handlePackageClick(`${pkg.name} (${pkg.price})`)}
                   className={pkg.featured ? 'btn-primary' : 'btn-secondary'}
-                  style={{
-                    width: '100%',
-                    padding: '13px 20px',
-                    fontSize: '15px',
-                    borderRadius: 'var(--radius-pill)'
-                  }}
+                  style={{ width: '100%' }}
                 >
                   Select {pkg.name}
                 </button>
@@ -204,7 +199,7 @@ export default function PartnerSection({ onShowToast }) {
                     backgroundColor: '#FFFFFF',
                     border: '1px solid var(--color-border)',
                     padding: '3px 10px',
-                    borderRadius: 'var(--radius-pill)',
+                    borderRadius: 'var(--radius-sm)',
                     display: 'inline-block',
                     marginBottom: '4px'
                   }}
@@ -300,7 +295,7 @@ export default function PartnerSection({ onShowToast }) {
                     required
                     value={formData.businessName}
                     onChange={handleChange}
-                    placeholder="e.g. BusinessPlus or Nairobi Cafe"
+                    placeholder="e.g. BusinessPlus or your company"
                     style={{
                       width: '100%',
                       padding: '13px 14px',
