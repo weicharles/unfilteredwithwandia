@@ -30,10 +30,12 @@ export default function FaqSection() {
 
         {/* Dual Tab Switcher */}
         <div
+          className="faq-tabs-row"
           style={{
             display: 'flex',
-            gap: '12px',
-            marginBottom: '32px'
+            gap: '10px',
+            marginBottom: '32px',
+            flexWrap: 'wrap'
           }}
         >
           <button
@@ -41,15 +43,17 @@ export default function FaqSection() {
               setActiveTab('partners');
               setOpenIndexes([0]);
             }}
+            className="faq-tab-btn"
             style={{
-              padding: '12px 24px',
-              borderRadius: 'var(--radius-pill)',
+              padding: '10px 20px',
+              borderRadius: 'var(--radius-sm)',
               fontWeight: 600,
-              fontSize: '15px',
+              fontSize: '14.5px',
               backgroundColor: activeTab === 'partners' ? 'var(--color-black)' : 'var(--color-surface)',
               color: activeTab === 'partners' ? '#FFFFFF' : 'var(--color-black)',
               cursor: 'pointer',
               border: 'none',
+              whiteSpace: 'nowrap',
               transition: 'background-color 0.2s ease, color 0.2s ease'
             }}
           >
@@ -61,15 +65,17 @@ export default function FaqSection() {
               setActiveTab('guests');
               setOpenIndexes([0]);
             }}
+            className="faq-tab-btn"
             style={{
-              padding: '12px 24px',
-              borderRadius: 'var(--radius-pill)',
+              padding: '10px 20px',
+              borderRadius: 'var(--radius-sm)',
               fontWeight: 600,
-              fontSize: '15px',
+              fontSize: '14.5px',
               backgroundColor: activeTab === 'guests' ? 'var(--color-black)' : 'var(--color-surface)',
               color: activeTab === 'guests' ? '#FFFFFF' : 'var(--color-black)',
               cursor: 'pointer',
               border: 'none',
+              whiteSpace: 'nowrap',
               transition: 'background-color 0.2s ease, color 0.2s ease'
             }}
           >
@@ -139,6 +145,21 @@ export default function FaqSection() {
         </div>
 
       </div>
+
+      <style>{`
+        @media (max-width: 540px) {
+          .faq-tabs-row {
+            flex-direction: column !important;
+            gap: 8px !important;
+          }
+          .faq-tab-btn {
+            width: 100% !important;
+            text-align: center !important;
+            padding: 10px 16px !important;
+            min-height: 40px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
