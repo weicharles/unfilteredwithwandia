@@ -45,11 +45,11 @@ export const PODCAST_DATA = {
       id: "KcTbQNUHHuU",
       youtubeId: "KcTbQNUHHuU",
       title: "Sitting with the Rich: The Power of Branding",
-      guest: "Nairobi Brand Strategist",
+      guest: "Brand Strategist",
       views: "520+",
       duration: "48 min",
       topic: "Money & Hustle",
-      summary: "An inside look at personal branding, networking with high-net-worth circles in Nairobi, and turning perception into economic leverage.",
+      summary: "An inside look at personal branding, networking with high-net-worth circles, and turning perception into economic leverage.",
       featured: true
     },
     {
@@ -67,11 +67,11 @@ export const PODCAST_DATA = {
       id: "mvdwMF4uv1s",
       youtubeId: "mvdwMF4uv1s",
       title: "From Selling Eggs to Building a Thriving Company",
-      guest: "Nairobi Entrepreneur",
+      guest: "Guest Entrepreneur",
       views: "428",
       duration: "58 min",
       topic: "Money & Hustle",
-      summary: "Raw entrepreneurial grit: starting on the streets of Nairobi with zero capital, navigating rejection, and scaling a viable business in Kenya.",
+      summary: "Raw entrepreneurial grit: starting out with zero capital, navigating rejection, and scaling a viable business in Kenya.",
       featured: false
     },
     {
@@ -137,7 +137,7 @@ export const PODCAST_DATA = {
       views: "410+",
       duration: "54 min",
       topic: "Love & Relationships",
-      summary: "Renowned presenter Mokaya shares raw thoughts on modern dating culture, commitment, biology, and expectations in Nairobi.",
+      summary: "Renowned presenter Mokaya shares raw thoughts on modern dating culture, commitment, biology, and relationship expectations.",
       featured: false
     },
     {
@@ -305,8 +305,8 @@ export const PODCAST_DATA = {
         a: "No! Guests never pay to share their real stories. Unfiltered with Wandia is built on authentic lived experiences and storytelling."
       },
       {
-        q: "Where do you record, and how long does a session take?",
-        a: "We record in a quiet, cozy professional studio setup in Nairobi. Recording sessions typically take 60 to 90 minutes in a warm, unhurried atmosphere."
+        q: "How does the recording work, and how long does a session take?",
+        a: "We record in a quiet, cozy professional studio setup. Recording sessions typically take 60 to 90 minutes in a warm, unhurried atmosphere."
       },
       {
         q: "Can I choose what topics we do and do not discuss?",
