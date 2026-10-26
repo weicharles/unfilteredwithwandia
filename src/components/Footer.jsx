@@ -51,10 +51,9 @@ export default function Footer() {
             <button
               onClick={() => scrollTo('#partner')}
               className="btn-primary"
-              style={{ padding: '15px 30px', fontSize: '1rem' }}
             >
               Partner With Us
-              <IconArrowRight size={18} />
+              <IconArrowRight size={16} />
             </button>
             <button
               onClick={() => scrollTo('#guest')}
@@ -62,9 +61,7 @@ export default function Footer() {
               style={{
                 backgroundColor: '#202024',
                 color: '#FFFFFF',
-                border: '1.5px solid rgba(255, 255, 255, 0.25)',
-                padding: '15px 30px',
-                fontSize: '1rem'
+                border: '1.5px solid rgba(255, 255, 255, 0.25)'
               }}
             >
               Be a Guest
@@ -151,7 +148,7 @@ export default function Footer() {
                 Unfiltered with Wandia
               </div>
               <div style={{ fontSize: '14px', color: '#888890' }}>
-                Stories that inspire growth · Nairobi, Kenya
+                Stories that inspire growth · Watch on YouTube
               </div>
             </div>
           </div>
