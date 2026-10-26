@@ -105,10 +105,9 @@ export default function AboutSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary"
-                style={{ fontSize: '15px', padding: '14px 28px' }}
               >
-                <IconYoutube size={18} />
-                Visit YouTube Channel (@unfilteredwithwandia)
+                <IconYoutube size={16} />
+                Visit YouTube Channel
               </a>
             </div>
 
